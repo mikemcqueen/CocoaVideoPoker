@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workspace
+   version = "1.0">
+   <Group
+      location = "group:../../Common"
+      name = "Common">
+      <FileRef
+         location = "group:autocs.h">
+      </FileRef>
+      <FileRef
+         location = "group:autohand.h">
+      </FileRef>
+      <FileRef
+         location = "group:CudaHelper.h">
+      </FileRef>
+      <FileRef
+         location = "group:Flag_t.hpp">
+      </FileRef>
+      <FileRef
+         location = "group:Log_t.h">
+      </FileRef>
+      <FileRef
+         location = "group:Platform.h">
+      </FileRef>
+      <FileRef
+         location = "group:Timer_t.h">
+      </FileRef>
+      <Group
+         location = "group:vc"
+         name = "vc">
+         <FileRef
+            location = "group:include.h">
+         </FileRef>
+         <FileRef
+            location = "group:targetver.h">
+         </FileRef>
+      </Group>
+      <Group
+         location = "group:xcode"
+         name = "xcode">
+         <FileRef
+            location = "group:include.h">
+         </FileRef>
+      </Group>
+   </Group>
+   <FileRef
+      location = "group:../../CardLib/xcode/CardLib.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:../VideoPoker.xcodeproj">
+   </FileRef>
+</Workspace>

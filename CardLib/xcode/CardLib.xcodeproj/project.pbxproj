@@ -1,0 +1,725 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		270E0A971272A837006133CA /* DoubleDblBonus.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 270E0A941272A837006133CA /* DoubleDblBonus.cpp */; };
+		270E0A991272A837006133CA /* FileBuffer.h in Headers */ = {isa = PBXBuildFile; fileRef = 270E0A961272A837006133CA /* FileBuffer.h */; };
+		27778D1711BE0E5F00EC74C0 /* Combinations.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 27778D1511BE0E5F00EC74C0 /* Combinations.cpp */; };
+		27778D1811BE0E5F00EC74C0 /* Combinations.h in Headers */ = {isa = PBXBuildFile; fileRef = 27778D1611BE0E5F00EC74C0 /* Combinations.h */; };
+		278726761228C347004D477E /* JacksOrBetter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 278726741228C347004D477E /* JacksOrBetter.cpp */; };
+		2787267A1228C4D0004D477E /* TripleDblBonus.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 278726781228C4D0004D477E /* TripleDblBonus.cpp */; };
+		2787268A122DF941004D477E /* DeucesWild.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 27872689122DF941004D477E /* DeucesWild.cpp */; };
+		2787277F123308F8004D477E /* Platform.h in Headers */ = {isa = PBXBuildFile; fileRef = 2787277E123308F8004D477E /* Platform.h */; };
+		27909EE911BAB94700BD7A8F /* Card.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 27909ED111BAB94600BD7A8F /* Card.cpp */; };
+		27909EEA11BAB94700BD7A8F /* Card.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 27909ED211BAB94600BD7A8F /* Card.hpp */; };
+		27909EEB11BAB94700BD7A8F /* Deck.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 27909ED311BAB94600BD7A8F /* Deck.cpp */; };
+		27909EEC11BAB94700BD7A8F /* Deck.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 27909ED411BAB94600BD7A8F /* Deck.hpp */; };
+		27909EEE11BAB94700BD7A8F /* FiveDraw.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 27909ED611BAB94600BD7A8F /* FiveDraw.cpp */; };
+		27909EEF11BAB94700BD7A8F /* Hand.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 27909ED711BAB94600BD7A8F /* Hand.cpp */; };
+		27909EF011BAB94700BD7A8F /* Hand.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 27909ED811BAB94600BD7A8F /* Hand.hpp */; };
+		27909EF111BAB94700BD7A8F /* HandAnalyzer_t.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 27909ED911BAB94600BD7A8F /* HandAnalyzer_t.hpp */; };
+		27909EF211BAB94700BD7A8F /* Handdisp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 27909EDA11BAB94600BD7A8F /* Handdisp.cpp */; };
+		27909EF311BAB94700BD7A8F /* HandIterator_t.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 27909EDB11BAB94600BD7A8F /* HandIterator_t.hpp */; };
+		27909EF411BAB94700BD7A8F /* HandIterator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 27909EDC11BAB94600BD7A8F /* HandIterator.cpp */; };
+		27909EF511BAB94700BD7A8F /* IndexCombination.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 27909EDD11BAB94600BD7A8F /* IndexCombination.cpp */; };
+		27909EF611BAB94700BD7A8F /* IndexCombination.h in Headers */ = {isa = PBXBuildFile; fileRef = 27909EDE11BAB94600BD7A8F /* IndexCombination.h */; };
+		27909EF711BAB94700BD7A8F /* PaySchedule.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 27909EDF11BAB94600BD7A8F /* PaySchedule.cpp */; };
+		27909EF811BAB94700BD7A8F /* PaySchedule.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 27909EE011BAB94600BD7A8F /* PaySchedule.hpp */; };
+		27909EFA11BAB94700BD7A8F /* Poker.h in Headers */ = {isa = PBXBuildFile; fileRef = 27909EE211BAB94600BD7A8F /* Poker.h */; };
+		27909EFB11BAB94700BD7A8F /* SolverData_t.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 27909EE311BAB94600BD7A8F /* SolverData_t.hpp */; };
+		27909EFC11BAB94700BD7A8F /* SolverDataGenerator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 27909EE411BAB94600BD7A8F /* SolverDataGenerator.cpp */; };
+		27909EFD11BAB94700BD7A8F /* SolverDataGenerator.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 27909EE511BAB94700BD7A8F /* SolverDataGenerator.hpp */; };
+		27909EFE11BAB94700BD7A8F /* SolverDataLookup.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 27909EE611BAB94700BD7A8F /* SolverDataLookup.cpp */; };
+		27909EFF11BAB94700BD7A8F /* SolverDataLookup.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 27909EE711BAB94700BD7A8F /* SolverDataLookup.hpp */; };
+		27909F0011BAB94700BD7A8F /* stdafx.h in Headers */ = {isa = PBXBuildFile; fileRef = 27909EE811BAB94700BD7A8F /* stdafx.h */; };
+		27909F8111BAC18E00BD7A8F /* autocs.h in Headers */ = {isa = PBXBuildFile; fileRef = 27909F7D11BAC18E00BD7A8F /* autocs.h */; };
+		27909F8211BAC18E00BD7A8F /* autohand.h in Headers */ = {isa = PBXBuildFile; fileRef = 27909F7E11BAC18E00BD7A8F /* autohand.h */; };
+		27909F8311BAC18E00BD7A8F /* Log_t.h in Headers */ = {isa = PBXBuildFile; fileRef = 27909F7F11BAC18E00BD7A8F /* Log_t.h */; };
+		27909F8411BAC18E00BD7A8F /* Timer_t.h in Headers */ = {isa = PBXBuildFile; fileRef = 27909F8011BAC18E00BD7A8F /* Timer_t.h */; };
+		2790A2FB11BB50C900BD7A8F /* Deck.h in Headers */ = {isa = PBXBuildFile; fileRef = 2790A2F411BB50C900BD7A8F /* Deck.h */; };
+		2790A2FC11BB50C900BD7A8F /* Deck.mm in Sources */ = {isa = PBXBuildFile; fileRef = 2790A2F511BB50C900BD7A8F /* Deck.mm */; };
+		2790A3DE11BB532F00BD7A8F /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2790A3DD11BB532F00BD7A8F /* CoreGraphics.framework */; };
+		27E8A426134975B4004740DB /* AllAmerican.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 27E8A412134975B4004740DB /* AllAmerican.cpp */; };
+		27E8A427134975B4004740DB /* BonusDeuces.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 27E8A413134975B4004740DB /* BonusDeuces.cpp */; };
+		27E8A428134975B4004740DB /* BonusPoker.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 27E8A414134975B4004740DB /* BonusPoker.cpp */; };
+		27E8A429134975B4004740DB /* BonusPokerBase.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 27E8A415134975B4004740DB /* BonusPokerBase.cpp */; };
+		27E8A42A134975B4004740DB /* BonusPokerDeluxe.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 27E8A416134975B4004740DB /* BonusPokerDeluxe.cpp */; };
+		27E8A42B134975B4004740DB /* DeucesWildBase.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 27E8A417134975B4004740DB /* DeucesWildBase.cpp */; };
+		27E8A42C134975B4004740DB /* DoubleBonus.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 27E8A418134975B4004740DB /* DoubleBonus.cpp */; };
+		27E8A42D134975B4004740DB /* DoubleBonusPlus.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 27E8A419134975B4004740DB /* DoubleBonusPlus.cpp */; };
+		27E8A42E134975B4004740DB /* DoubleDeuces.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 27E8A41A134975B4004740DB /* DoubleDeuces.cpp */; };
+		27E8A42F134975B4004740DB /* GameRegister.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 27E8A41B134975B4004740DB /* GameRegister.hpp */; };
+		27E8A430134975B4004740DB /* JacksOrBetter.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 27E8A41C134975B4004740DB /* JacksOrBetter.hpp */; };
+		27E8A431134975B4004740DB /* JacksOrBetterBase.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 27E8A41D134975B4004740DB /* JacksOrBetterBase.cpp */; };
+		27E8A432134975B4004740DB /* JokersWild.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 27E8A41E134975B4004740DB /* JokersWild.cpp */; };
+		27E8A433134975B4004740DB /* LooseDeuces.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 27E8A41F134975B4004740DB /* LooseDeuces.cpp */; };
+		27E8A434134975B4004740DB /* PayScheduleManager.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 27E8A420134975B4004740DB /* PayScheduleManager.hpp */; };
+		27E8A435134975B4004740DB /* PayScheduleManger.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 27E8A421134975B4004740DB /* PayScheduleManger.cpp */; };
+		27E8A436134975B4004740DB /* PayScheduleTypes.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 27E8A422134975B4004740DB /* PayScheduleTypes.hpp */; };
+		27E8A437134975B4004740DB /* SuperAces.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 27E8A423134975B4004740DB /* SuperAces.cpp */; };
+		27E8A438134975B4004740DB /* SuperDoubleBonus.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 27E8A424134975B4004740DB /* SuperDoubleBonus.cpp */; };
+		27E8A439134975B4004740DB /* WhiteHotAces.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 27E8A425134975B4004740DB /* WhiteHotAces.cpp */; };
+		27F7A49211F2B99600CDBC31 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27F7A49111F2B99600CDBC31 /* Foundation.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		270E0A941272A837006133CA /* DoubleDblBonus.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = DoubleDblBonus.cpp; path = ../DoubleDblBonus.cpp; sourceTree = SOURCE_ROOT; };
+		270E0A961272A837006133CA /* FileBuffer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FileBuffer.h; path = ../FileBuffer.h; sourceTree = SOURCE_ROOT; };
+		27778D1511BE0E5F00EC74C0 /* Combinations.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Combinations.cpp; path = ../Combinations.cpp; sourceTree = SOURCE_ROOT; };
+		27778D1611BE0E5F00EC74C0 /* Combinations.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Combinations.h; path = ../Combinations.h; sourceTree = SOURCE_ROOT; };
+		278726741228C347004D477E /* JacksOrBetter.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = JacksOrBetter.cpp; path = ../JacksOrBetter.cpp; sourceTree = SOURCE_ROOT; };
+		278726781228C4D0004D477E /* TripleDblBonus.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = TripleDblBonus.cpp; path = ../TripleDblBonus.cpp; sourceTree = SOURCE_ROOT; };
+		27872689122DF941004D477E /* DeucesWild.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = DeucesWild.cpp; path = ../DeucesWild.cpp; sourceTree = SOURCE_ROOT; };
+		2787277E123308F8004D477E /* Platform.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Platform.h; sourceTree = "<group>"; };
+		27909ED111BAB94600BD7A8F /* Card.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Card.cpp; path = ../Card.cpp; sourceTree = SOURCE_ROOT; };
+		27909ED211BAB94600BD7A8F /* Card.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = Card.hpp; path = ../Card.hpp; sourceTree = SOURCE_ROOT; };
+		27909ED311BAB94600BD7A8F /* Deck.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Deck.cpp; path = ../Deck.cpp; sourceTree = SOURCE_ROOT; };
+		27909ED411BAB94600BD7A8F /* Deck.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = Deck.hpp; path = ../Deck.hpp; sourceTree = SOURCE_ROOT; };
+		27909ED611BAB94600BD7A8F /* FiveDraw.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = FiveDraw.cpp; path = ../FiveDraw.cpp; sourceTree = SOURCE_ROOT; };
+		27909ED711BAB94600BD7A8F /* Hand.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Hand.cpp; path = ../Hand.cpp; sourceTree = SOURCE_ROOT; };
+		27909ED811BAB94600BD7A8F /* Hand.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = Hand.hpp; path = ../Hand.hpp; sourceTree = SOURCE_ROOT; };
+		27909ED911BAB94600BD7A8F /* HandAnalyzer_t.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = HandAnalyzer_t.hpp; path = ../HandAnalyzer_t.hpp; sourceTree = SOURCE_ROOT; };
+		27909EDA11BAB94600BD7A8F /* Handdisp.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Handdisp.cpp; path = ../Handdisp.cpp; sourceTree = SOURCE_ROOT; };
+		27909EDB11BAB94600BD7A8F /* HandIterator_t.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = HandIterator_t.hpp; path = ../HandIterator_t.hpp; sourceTree = SOURCE_ROOT; };
+		27909EDC11BAB94600BD7A8F /* HandIterator.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = HandIterator.cpp; path = ../HandIterator.cpp; sourceTree = SOURCE_ROOT; };
+		27909EDD11BAB94600BD7A8F /* IndexCombination.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = IndexCombination.cpp; path = ../IndexCombination.cpp; sourceTree = SOURCE_ROOT; };
+		27909EDE11BAB94600BD7A8F /* IndexCombination.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IndexCombination.h; path = ../IndexCombination.h; sourceTree = SOURCE_ROOT; };
+		27909EDF11BAB94600BD7A8F /* PaySchedule.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = PaySchedule.cpp; path = ../PaySchedule.cpp; sourceTree = SOURCE_ROOT; };
+		27909EE011BAB94600BD7A8F /* PaySchedule.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = PaySchedule.hpp; path = ../PaySchedule.hpp; sourceTree = SOURCE_ROOT; };
+		27909EE211BAB94600BD7A8F /* Poker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Poker.h; path = ../Poker.h; sourceTree = SOURCE_ROOT; };
+		27909EE311BAB94600BD7A8F /* SolverData_t.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = SolverData_t.hpp; path = ../SolverData_t.hpp; sourceTree = SOURCE_ROOT; };
+		27909EE411BAB94600BD7A8F /* SolverDataGenerator.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = SolverDataGenerator.cpp; path = ../SolverDataGenerator.cpp; sourceTree = SOURCE_ROOT; };
+		27909EE511BAB94700BD7A8F /* SolverDataGenerator.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = SolverDataGenerator.hpp; path = ../SolverDataGenerator.hpp; sourceTree = SOURCE_ROOT; };
+		27909EE611BAB94700BD7A8F /* SolverDataLookup.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = SolverDataLookup.cpp; path = ../SolverDataLookup.cpp; sourceTree = SOURCE_ROOT; };
+		27909EE711BAB94700BD7A8F /* SolverDataLookup.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = SolverDataLookup.hpp; path = ../SolverDataLookup.hpp; sourceTree = SOURCE_ROOT; };
+		27909EE811BAB94700BD7A8F /* stdafx.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = stdafx.h; path = ../stdafx.h; sourceTree = SOURCE_ROOT; };
+		27909F7D11BAC18E00BD7A8F /* autocs.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = autocs.h; path = ../../Common/autocs.h; sourceTree = SOURCE_ROOT; };
+		27909F7E11BAC18E00BD7A8F /* autohand.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = autohand.h; path = ../../Common/autohand.h; sourceTree = SOURCE_ROOT; };
+		27909F7F11BAC18E00BD7A8F /* Log_t.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Log_t.h; path = ../../Common/Log_t.h; sourceTree = SOURCE_ROOT; };
+		27909F8011BAC18E00BD7A8F /* Timer_t.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Timer_t.h; path = ../../Common/Timer_t.h; sourceTree = SOURCE_ROOT; };
+		2790A2F411BB50C900BD7A8F /* Deck.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Deck.h; path = ../ObjC/Deck.h; sourceTree = SOURCE_ROOT; };
+		2790A2F511BB50C900BD7A8F /* Deck.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = Deck.mm; path = ../ObjC/Deck.mm; sourceTree = SOURCE_ROOT; };
+		2790A3DD11BB532F00BD7A8F /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = /System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/CoreGraphics.framework; sourceTree = "<absolute>"; };
+		27E8A412134975B4004740DB /* AllAmerican.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = AllAmerican.cpp; path = ../AllAmerican.cpp; sourceTree = SOURCE_ROOT; };
+		27E8A413134975B4004740DB /* BonusDeuces.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = BonusDeuces.cpp; path = ../BonusDeuces.cpp; sourceTree = SOURCE_ROOT; };
+		27E8A414134975B4004740DB /* BonusPoker.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = BonusPoker.cpp; path = ../BonusPoker.cpp; sourceTree = SOURCE_ROOT; };
+		27E8A415134975B4004740DB /* BonusPokerBase.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = BonusPokerBase.cpp; path = ../BonusPokerBase.cpp; sourceTree = SOURCE_ROOT; };
+		27E8A416134975B4004740DB /* BonusPokerDeluxe.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = BonusPokerDeluxe.cpp; path = ../BonusPokerDeluxe.cpp; sourceTree = SOURCE_ROOT; };
+		27E8A417134975B4004740DB /* DeucesWildBase.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = DeucesWildBase.cpp; path = ../DeucesWildBase.cpp; sourceTree = SOURCE_ROOT; };
+		27E8A418134975B4004740DB /* DoubleBonus.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = DoubleBonus.cpp; path = ../DoubleBonus.cpp; sourceTree = SOURCE_ROOT; };
+		27E8A419134975B4004740DB /* DoubleBonusPlus.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = DoubleBonusPlus.cpp; path = ../DoubleBonusPlus.cpp; sourceTree = SOURCE_ROOT; };
+		27E8A41A134975B4004740DB /* DoubleDeuces.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = DoubleDeuces.cpp; path = ../DoubleDeuces.cpp; sourceTree = SOURCE_ROOT; };
+		27E8A41B134975B4004740DB /* GameRegister.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = GameRegister.hpp; path = ../GameRegister.hpp; sourceTree = SOURCE_ROOT; };
+		27E8A41C134975B4004740DB /* JacksOrBetter.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = JacksOrBetter.hpp; path = ../JacksOrBetter.hpp; sourceTree = SOURCE_ROOT; };
+		27E8A41D134975B4004740DB /* JacksOrBetterBase.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = JacksOrBetterBase.cpp; path = ../JacksOrBetterBase.cpp; sourceTree = SOURCE_ROOT; };
+		27E8A41E134975B4004740DB /* JokersWild.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = JokersWild.cpp; path = ../JokersWild.cpp; sourceTree = SOURCE_ROOT; };
+		27E8A41F134975B4004740DB /* LooseDeuces.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = LooseDeuces.cpp; path = ../LooseDeuces.cpp; sourceTree = SOURCE_ROOT; };
+		27E8A420134975B4004740DB /* PayScheduleManager.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = PayScheduleManager.hpp; path = ../PayScheduleManager.hpp; sourceTree = SOURCE_ROOT; };
+		27E8A421134975B4004740DB /* PayScheduleManger.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = PayScheduleManger.cpp; path = ../PayScheduleManger.cpp; sourceTree = SOURCE_ROOT; };
+		27E8A422134975B4004740DB /* PayScheduleTypes.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = PayScheduleTypes.hpp; path = ../PayScheduleTypes.hpp; sourceTree = SOURCE_ROOT; };
+		27E8A423134975B4004740DB /* SuperAces.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = SuperAces.cpp; path = ../SuperAces.cpp; sourceTree = SOURCE_ROOT; };
+		27E8A424134975B4004740DB /* SuperDoubleBonus.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = SuperDoubleBonus.cpp; path = ../SuperDoubleBonus.cpp; sourceTree = SOURCE_ROOT; };
+		27E8A425134975B4004740DB /* WhiteHotAces.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = WhiteHotAces.cpp; path = ../WhiteHotAces.cpp; sourceTree = SOURCE_ROOT; };
+		27F7A49111F2B99600CDBC31 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
+		D2AAC046055464E500DB518D /* libCardLib.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libCardLib.a; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D289987405E68DCB004EDB86 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2790A3DE11BB532F00BD7A8F /* CoreGraphics.framework in Frameworks */,
+				27F7A49211F2B99600CDBC31 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		08FB7794FE84155DC02AAC07 /* CardLib */ = {
+			isa = PBXGroup;
+			children = (
+				27E8A41113497543004740DB /* PaySchedules */,
+				2790A3E111BB533800BD7A8F /* Frameworks */,
+				27909F7C11BAC18E00BD7A8F /* Common */,
+				08FB7795FE84155DC02AAC07 /* Source */,
+				C6A0FF2B0290797F04C91782 /* Documentation */,
+				1AB674ADFE9D54B511CA2CBB /* Products */,
+			);
+			name = CardLib;
+			sourceTree = "<group>";
+		};
+		08FB7795FE84155DC02AAC07 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				270E0A961272A837006133CA /* FileBuffer.h */,
+				27778D1511BE0E5F00EC74C0 /* Combinations.cpp */,
+				27778D1611BE0E5F00EC74C0 /* Combinations.h */,
+				2790A2F111BB50C900BD7A8F /* ObjC */,
+				27909ED111BAB94600BD7A8F /* Card.cpp */,
+				27909ED211BAB94600BD7A8F /* Card.hpp */,
+				27909ED311BAB94600BD7A8F /* Deck.cpp */,
+				27909ED411BAB94600BD7A8F /* Deck.hpp */,
+				27909ED611BAB94600BD7A8F /* FiveDraw.cpp */,
+				27909ED711BAB94600BD7A8F /* Hand.cpp */,
+				27909ED811BAB94600BD7A8F /* Hand.hpp */,
+				27909ED911BAB94600BD7A8F /* HandAnalyzer_t.hpp */,
+				27909EDA11BAB94600BD7A8F /* Handdisp.cpp */,
+				27909EDB11BAB94600BD7A8F /* HandIterator_t.hpp */,
+				27909EDC11BAB94600BD7A8F /* HandIterator.cpp */,
+				27909EDD11BAB94600BD7A8F /* IndexCombination.cpp */,
+				27909EDE11BAB94600BD7A8F /* IndexCombination.h */,
+				27909EDF11BAB94600BD7A8F /* PaySchedule.cpp */,
+				27909EE011BAB94600BD7A8F /* PaySchedule.hpp */,
+				27E8A420134975B4004740DB /* PayScheduleManager.hpp */,
+				27E8A421134975B4004740DB /* PayScheduleManger.cpp */,
+				27E8A422134975B4004740DB /* PayScheduleTypes.hpp */,
+				27909EE211BAB94600BD7A8F /* Poker.h */,
+				27909EE311BAB94600BD7A8F /* SolverData_t.hpp */,
+				27909EE411BAB94600BD7A8F /* SolverDataGenerator.cpp */,
+				27909EE511BAB94700BD7A8F /* SolverDataGenerator.hpp */,
+				27909EE611BAB94700BD7A8F /* SolverDataLookup.cpp */,
+				27909EE711BAB94700BD7A8F /* SolverDataLookup.hpp */,
+				27909EE811BAB94700BD7A8F /* stdafx.h */,
+			);
+			name = Source;
+			sourceTree = "<group>";
+		};
+		1AB674ADFE9D54B511CA2CBB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D2AAC046055464E500DB518D /* libCardLib.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		27909F7C11BAC18E00BD7A8F /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				2787277E123308F8004D477E /* Platform.h */,
+				27909F7D11BAC18E00BD7A8F /* autocs.h */,
+				27909F7E11BAC18E00BD7A8F /* autohand.h */,
+				27909F7F11BAC18E00BD7A8F /* Log_t.h */,
+				27909F8011BAC18E00BD7A8F /* Timer_t.h */,
+			);
+			name = Common;
+			path = ../../Common;
+			sourceTree = SOURCE_ROOT;
+		};
+		2790A2F111BB50C900BD7A8F /* ObjC */ = {
+			isa = PBXGroup;
+			children = (
+				2790A2F411BB50C900BD7A8F /* Deck.h */,
+				2790A2F511BB50C900BD7A8F /* Deck.mm */,
+			);
+			name = ObjC;
+			path = ../ObjC;
+			sourceTree = SOURCE_ROOT;
+		};
+		2790A3E111BB533800BD7A8F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2790A3DD11BB532F00BD7A8F /* CoreGraphics.framework */,
+				27F7A49111F2B99600CDBC31 /* Foundation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		27E8A41113497543004740DB /* PaySchedules */ = {
+			isa = PBXGroup;
+			children = (
+				27E8A412134975B4004740DB /* AllAmerican.cpp */,
+				27E8A413134975B4004740DB /* BonusDeuces.cpp */,
+				27E8A414134975B4004740DB /* BonusPoker.cpp */,
+				27E8A415134975B4004740DB /* BonusPokerBase.cpp */,
+				27E8A416134975B4004740DB /* BonusPokerDeluxe.cpp */,
+				27E8A417134975B4004740DB /* DeucesWildBase.cpp */,
+				27E8A418134975B4004740DB /* DoubleBonus.cpp */,
+				27E8A419134975B4004740DB /* DoubleBonusPlus.cpp */,
+				27E8A41A134975B4004740DB /* DoubleDeuces.cpp */,
+				27E8A41B134975B4004740DB /* GameRegister.hpp */,
+				27E8A41C134975B4004740DB /* JacksOrBetter.hpp */,
+				27E8A41D134975B4004740DB /* JacksOrBetterBase.cpp */,
+				27E8A41E134975B4004740DB /* JokersWild.cpp */,
+				27E8A41F134975B4004740DB /* LooseDeuces.cpp */,
+				27E8A423134975B4004740DB /* SuperAces.cpp */,
+				27E8A424134975B4004740DB /* SuperDoubleBonus.cpp */,
+				27E8A425134975B4004740DB /* WhiteHotAces.cpp */,
+				270E0A941272A837006133CA /* DoubleDblBonus.cpp */,
+				278726741228C347004D477E /* JacksOrBetter.cpp */,
+				27872689122DF941004D477E /* DeucesWild.cpp */,
+				278726781228C4D0004D477E /* TripleDblBonus.cpp */,
+			);
+			name = PaySchedules;
+			sourceTree = "<group>";
+		};
+		C6A0FF2B0290797F04C91782 /* Documentation */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Documentation;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		D2AAC043055464E500DB518D /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				27909EEA11BAB94700BD7A8F /* Card.hpp in Headers */,
+				27909EEC11BAB94700BD7A8F /* Deck.hpp in Headers */,
+				27909EF011BAB94700BD7A8F /* Hand.hpp in Headers */,
+				27909EF111BAB94700BD7A8F /* HandAnalyzer_t.hpp in Headers */,
+				27909EF311BAB94700BD7A8F /* HandIterator_t.hpp in Headers */,
+				27909EF611BAB94700BD7A8F /* IndexCombination.h in Headers */,
+				27909EF811BAB94700BD7A8F /* PaySchedule.hpp in Headers */,
+				27909EFA11BAB94700BD7A8F /* Poker.h in Headers */,
+				27909EFB11BAB94700BD7A8F /* SolverData_t.hpp in Headers */,
+				27909EFD11BAB94700BD7A8F /* SolverDataGenerator.hpp in Headers */,
+				27909EFF11BAB94700BD7A8F /* SolverDataLookup.hpp in Headers */,
+				27909F0011BAB94700BD7A8F /* stdafx.h in Headers */,
+				27909F8111BAC18E00BD7A8F /* autocs.h in Headers */,
+				27909F8211BAC18E00BD7A8F /* autohand.h in Headers */,
+				27909F8311BAC18E00BD7A8F /* Log_t.h in Headers */,
+				27909F8411BAC18E00BD7A8F /* Timer_t.h in Headers */,
+				2790A2FB11BB50C900BD7A8F /* Deck.h in Headers */,
+				27778D1811BE0E5F00EC74C0 /* Combinations.h in Headers */,
+				2787277F123308F8004D477E /* Platform.h in Headers */,
+				270E0A991272A837006133CA /* FileBuffer.h in Headers */,
+				27E8A42F134975B4004740DB /* GameRegister.hpp in Headers */,
+				27E8A430134975B4004740DB /* JacksOrBetter.hpp in Headers */,
+				27E8A434134975B4004740DB /* PayScheduleManager.hpp in Headers */,
+				27E8A436134975B4004740DB /* PayScheduleTypes.hpp in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		D2AAC045055464E500DB518D /* CardLib */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1DEB91EB08733DB70010E9CD /* Build configuration list for PBXNativeTarget "CardLib" */;
+			buildPhases = (
+				D2AAC043055464E500DB518D /* Headers */,
+				D2AAC044055464E500DB518D /* Sources */,
+				D289987405E68DCB004EDB86 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CardLib;
+			productName = CardLib;
+			productReference = D2AAC046055464E500DB518D /* libCardLib.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		08FB7793FE84155DC02AAC07 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0640;
+			};
+			buildConfigurationList = 1DEB91EF08733DB70010E9CD /* Build configuration list for PBXProject "CardLib" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 1;
+			knownRegions = (
+				English,
+				Japanese,
+				French,
+				German,
+			);
+			mainGroup = 08FB7794FE84155DC02AAC07 /* CardLib */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D2AAC045055464E500DB518D /* CardLib */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D2AAC044055464E500DB518D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				27909EE911BAB94700BD7A8F /* Card.cpp in Sources */,
+				27909EEB11BAB94700BD7A8F /* Deck.cpp in Sources */,
+				27909EEE11BAB94700BD7A8F /* FiveDraw.cpp in Sources */,
+				27909EEF11BAB94700BD7A8F /* Hand.cpp in Sources */,
+				27909EF211BAB94700BD7A8F /* Handdisp.cpp in Sources */,
+				27909EF411BAB94700BD7A8F /* HandIterator.cpp in Sources */,
+				27909EF511BAB94700BD7A8F /* IndexCombination.cpp in Sources */,
+				27909EF711BAB94700BD7A8F /* PaySchedule.cpp in Sources */,
+				27909EFC11BAB94700BD7A8F /* SolverDataGenerator.cpp in Sources */,
+				27909EFE11BAB94700BD7A8F /* SolverDataLookup.cpp in Sources */,
+				2790A2FC11BB50C900BD7A8F /* Deck.mm in Sources */,
+				27778D1711BE0E5F00EC74C0 /* Combinations.cpp in Sources */,
+				278726761228C347004D477E /* JacksOrBetter.cpp in Sources */,
+				2787267A1228C4D0004D477E /* TripleDblBonus.cpp in Sources */,
+				2787268A122DF941004D477E /* DeucesWild.cpp in Sources */,
+				270E0A971272A837006133CA /* DoubleDblBonus.cpp in Sources */,
+				27E8A426134975B4004740DB /* AllAmerican.cpp in Sources */,
+				27E8A427134975B4004740DB /* BonusDeuces.cpp in Sources */,
+				27E8A428134975B4004740DB /* BonusPoker.cpp in Sources */,
+				27E8A429134975B4004740DB /* BonusPokerBase.cpp in Sources */,
+				27E8A42A134975B4004740DB /* BonusPokerDeluxe.cpp in Sources */,
+				27E8A42B134975B4004740DB /* DeucesWildBase.cpp in Sources */,
+				27E8A42C134975B4004740DB /* DoubleBonus.cpp in Sources */,
+				27E8A42D134975B4004740DB /* DoubleBonusPlus.cpp in Sources */,
+				27E8A42E134975B4004740DB /* DoubleDeuces.cpp in Sources */,
+				27E8A431134975B4004740DB /* JacksOrBetterBase.cpp in Sources */,
+				27E8A432134975B4004740DB /* JokersWild.cpp in Sources */,
+				27E8A433134975B4004740DB /* LooseDeuces.cpp in Sources */,
+				27E8A435134975B4004740DB /* PayScheduleManger.cpp in Sources */,
+				27E8A437134975B4004740DB /* SuperAces.cpp in Sources */,
+				27E8A438134975B4004740DB /* SuperDoubleBonus.cpp in Sources */,
+				27E8A439134975B4004740DB /* WhiteHotAces.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		1DEB91EC08733DB70010E9CD /* Debug iPhone 3.2 */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SYSTEM_LIBRARY_DIR)/Frameworks/ApplicationServices.framework/Versions/A/Frameworks\"",
+				);
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				INSTALL_PATH = /usr/local/lib;
+				PRODUCT_NAME = CardLib;
+			};
+			name = "Debug iPhone 3.2";
+		};
+		1DEB91ED08733DB70010E9CD /* Release iPhone 3.2 */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SYSTEM_LIBRARY_DIR)/Frameworks/ApplicationServices.framework/Versions/A/Frameworks\"",
+				);
+				GCC_INLINES_ARE_PRIVATE_EXTERN = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				INSTALL_PATH = /usr/local/lib;
+				PRODUCT_NAME = CardLib;
+			};
+			name = "Release iPhone 3.2";
+		};
+		1DEB91F008733DB70010E9CD /* Debug iPhone 3.2 */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_SYMBOLS_PRIVATE_EXTERN = YES;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = ../../common;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_CFLAGS = "-fvisibility=default";
+				SDKROOT = iphoneos;
+				SYMROOT = build;
+				VALID_ARCHS = "armv6 armv7 i386 x86_64";
+			};
+			name = "Debug iPhone 3.2";
+		};
+		1DEB91F108733DB70010E9CD /* Release iPhone 3.2 */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_SYMBOLS_PRIVATE_EXTERN = YES;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = ../../common;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_CFLAGS = "-fvisibility=default";
+				SDKROOT = iphoneos;
+				SYMROOT = build;
+				VALID_ARCHS = "armv6 armv7 i386 x86_64";
+			};
+			name = "Release iPhone 3.2";
+		};
+		27A04CD511F28894003E1DA2 /* Debug iPhone 4.x */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_SYMBOLS_PRIVATE_EXTERN = YES;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = ../../common;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_CFLAGS = "-fvisibility=default";
+				SDKROOT = iphoneos;
+				SYMROOT = build;
+				VALID_ARCHS = "armv6 armv7 i386 x86_64";
+			};
+			name = "Debug iPhone 4.x";
+		};
+		27A04CD611F28894003E1DA2 /* Debug iPhone 4.x */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SYSTEM_LIBRARY_DIR)/Frameworks/ApplicationServices.framework/Versions/A/Frameworks\"",
+				);
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				INSTALL_PATH = /usr/local/lib;
+				PRODUCT_NAME = CardLib;
+			};
+			name = "Debug iPhone 4.x";
+		};
+		27A04CD711F2889C003E1DA2 /* Debug Simulator 3.2 */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_SYMBOLS_PRIVATE_EXTERN = YES;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = ../../common;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_CFLAGS = "-fvisibility=default";
+				SDKROOT = iphoneos;
+				SYMROOT = build;
+				VALID_ARCHS = "armv6 armv7 i386 x86_64";
+			};
+			name = "Debug Simulator 3.2";
+		};
+		27A04CD811F2889C003E1DA2 /* Debug Simulator 3.2 */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SYSTEM_LIBRARY_DIR)/Frameworks/ApplicationServices.framework/Versions/A/Frameworks\"",
+				);
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				INSTALL_PATH = /usr/local/lib;
+				PRODUCT_NAME = CardLib;
+			};
+			name = "Debug Simulator 3.2";
+		};
+		27A04CD911F2889F003E1DA2 /* Release iPhone 4.x */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_SYMBOLS_PRIVATE_EXTERN = YES;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = ../../common;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_CFLAGS = "-fvisibility=default";
+				SDKROOT = iphoneos;
+				SYMROOT = build;
+				VALID_ARCHS = "armv6 armv7 i386 x86_64";
+			};
+			name = "Release iPhone 4.x";
+		};
+		27A04CDA11F2889F003E1DA2 /* Release iPhone 4.x */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SYSTEM_LIBRARY_DIR)/Frameworks/ApplicationServices.framework/Versions/A/Frameworks\"",
+				);
+				GCC_INLINES_ARE_PRIVATE_EXTERN = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				INSTALL_PATH = /usr/local/lib;
+				PRODUCT_NAME = CardLib;
+			};
+			name = "Release iPhone 4.x";
+		};
+		27A04CDB11F288A0003E1DA2 /* Release Simulator 3.2 */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_SYMBOLS_PRIVATE_EXTERN = YES;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = ../../common;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_CFLAGS = "-fvisibility=default";
+				SDKROOT = iphoneos;
+				SYMROOT = build;
+				VALID_ARCHS = "armv6 armv7 i386 x86_64";
+			};
+			name = "Release Simulator 3.2";
+		};
+		27A04CDC11F288A0003E1DA2 /* Release Simulator 3.2 */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SYSTEM_LIBRARY_DIR)/Frameworks/ApplicationServices.framework/Versions/A/Frameworks\"",
+				);
+				GCC_INLINES_ARE_PRIVATE_EXTERN = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				INSTALL_PATH = /usr/local/lib;
+				PRODUCT_NAME = CardLib;
+			};
+			name = "Release Simulator 3.2";
+		};
+		27A04CDD11F288D3003E1DA2 /* Release Simulator 4.x */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_SYMBOLS_PRIVATE_EXTERN = YES;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = ../../common;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_CFLAGS = "-fvisibility=default";
+				SDKROOT = iphoneos;
+				SYMROOT = build;
+				VALID_ARCHS = "armv6 armv7 i386 x86_64";
+			};
+			name = "Release Simulator 4.x";
+		};
+		27A04CDE11F288D3003E1DA2 /* Release Simulator 4.x */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SYSTEM_LIBRARY_DIR)/Frameworks/ApplicationServices.framework/Versions/A/Frameworks\"",
+				);
+				GCC_INLINES_ARE_PRIVATE_EXTERN = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				INSTALL_PATH = /usr/local/lib;
+				PRODUCT_NAME = CardLib;
+			};
+			name = "Release Simulator 4.x";
+		};
+		27A04CDF11F288D6003E1DA2 /* Debug Simulator 4.x */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_SYMBOLS_PRIVATE_EXTERN = YES;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = ../../common;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_CFLAGS = "-fvisibility=default";
+				SDKROOT = iphoneos;
+				SYMROOT = build;
+				VALID_ARCHS = "armv6 armv7 i386 x86_64";
+			};
+			name = "Debug Simulator 4.x";
+		};
+		27A04CE011F288D6003E1DA2 /* Debug Simulator 4.x */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SYSTEM_LIBRARY_DIR)/Frameworks/ApplicationServices.framework/Versions/A/Frameworks\"",
+				);
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				INSTALL_PATH = /usr/local/lib;
+				PRODUCT_NAME = CardLib;
+			};
+			name = "Debug Simulator 4.x";
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1DEB91EB08733DB70010E9CD /* Build configuration list for PBXNativeTarget "CardLib" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1DEB91EC08733DB70010E9CD /* Debug iPhone 3.2 */,
+				27A04CD611F28894003E1DA2 /* Debug iPhone 4.x */,
+				27A04CE011F288D6003E1DA2 /* Debug Simulator 4.x */,
+				27A04CD811F2889C003E1DA2 /* Debug Simulator 3.2 */,
+				1DEB91ED08733DB70010E9CD /* Release iPhone 3.2 */,
+				27A04CDA11F2889F003E1DA2 /* Release iPhone 4.x */,
+				27A04CDE11F288D3003E1DA2 /* Release Simulator 4.x */,
+				27A04CDC11F288A0003E1DA2 /* Release Simulator 3.2 */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = "Debug Simulator 4.x";
+		};
+		1DEB91EF08733DB70010E9CD /* Build configuration list for PBXProject "CardLib" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1DEB91F008733DB70010E9CD /* Debug iPhone 3.2 */,
+				27A04CD511F28894003E1DA2 /* Debug iPhone 4.x */,
+				27A04CDF11F288D6003E1DA2 /* Debug Simulator 4.x */,
+				27A04CD711F2889C003E1DA2 /* Debug Simulator 3.2 */,
+				1DEB91F108733DB70010E9CD /* Release iPhone 3.2 */,
+				27A04CD911F2889F003E1DA2 /* Release iPhone 4.x */,
+				27A04CDD11F288D3003E1DA2 /* Release Simulator 4.x */,
+				27A04CDB11F288A0003E1DA2 /* Release Simulator 3.2 */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = "Debug Simulator 4.x";
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 08FB7793FE84155DC02AAC07 /* Project object */;
+}
