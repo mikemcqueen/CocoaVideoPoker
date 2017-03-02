@@ -1,0 +1,996 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1D3623260D0F684500981E51 /* VideoPokerAppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 1D3623250D0F684500981E51 /* VideoPokerAppDelegate.mm */; };
+		1D60589B0D05DD56006BFB54 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; };
+		1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
+		1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
+		270E03F0125ED830006133CA /* ReturnView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 270E03EF125ED830006133CA /* ReturnView.xib */; };
+		270E04CA1260F890006133CA /* UIStrokeLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 270E04C91260F890006133CA /* UIStrokeLabel.m */; };
+		270E06FA12618251006133CA /* yellow-60-40.png in Resources */ = {isa = PBXBuildFile; fileRef = 270E06F912618251006133CA /* yellow-60-40.png */; };
+		270E08261263F40D006133CA /* yellow2-60-40.png in Resources */ = {isa = PBXBuildFile; fileRef = 270E08251263F40D006133CA /* yellow2-60-40.png */; };
+		270E09D1126D3F02006133CA /* OptionsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 270E09D0126D3F02006133CA /* OptionsView.xib */; };
+		270E0B18127682A8006133CA /* Deuces.dat in Resources */ = {isa = PBXBuildFile; fileRef = 270E0B17127682A8006133CA /* Deuces.dat */; };
+		270E0B2512793CDD006133CA /* HistoryViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 270E0B2312793CDD006133CA /* HistoryViewController.mm */; };
+		270E0BAA127AA024006133CA /* SessionTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 270E0BA9127AA024006133CA /* SessionTableCell.xib */; };
+		270E0CCE127FA589006133CA /* DDBonus.dat in Resources */ = {isa = PBXBuildFile; fileRef = 270E0CCC127FA589006133CA /* DDBonus.dat */; };
+		270E0CCF127FA589006133CA /* TDBonus.dat in Resources */ = {isa = PBXBuildFile; fileRef = 270E0CCD127FA589006133CA /* TDBonus.dat */; };
+		270E0EBF12962EBB006133CA /* SessionDetailsViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 270E0EBD12962EBB006133CA /* SessionDetailsViewController.mm */; };
+		270E0F2A1297885D006133CA /* FundingMO.m in Sources */ = {isa = PBXBuildFile; fileRef = 270E0F291297885C006133CA /* FundingMO.m */; };
+		270E0F2C1297885F006133CA /* HandDataMO.m in Sources */ = {isa = PBXBuildFile; fileRef = 270E0F2B1297885E006133CA /* HandDataMO.m */; };
+		270E0F2E12978860006133CA /* HandMO.mm in Sources */ = {isa = PBXBuildFile; fileRef = 270E0F2D1297885F006133CA /* HandMO.mm */; };
+		270E0F3012978862006133CA /* SessionMO.mm in Sources */ = {isa = PBXBuildFile; fileRef = 270E0F2F12978861006133CA /* SessionMO.mm */; };
+		270E0F3612978868006133CA /* _FundingMO.m in Sources */ = {isa = PBXBuildFile; fileRef = 270E0F3512978867006133CA /* _FundingMO.m */; };
+		270E0F381297886A006133CA /* _HandDataMO.m in Sources */ = {isa = PBXBuildFile; fileRef = 270E0F3712978869006133CA /* _HandDataMO.m */; };
+		270E0F3A1297886B006133CA /* _HandMO.m in Sources */ = {isa = PBXBuildFile; fileRef = 270E0F391297886A006133CA /* _HandMO.m */; };
+		270E0F3C1297886D006133CA /* _SessionMO.m in Sources */ = {isa = PBXBuildFile; fileRef = 270E0F3B1297886C006133CA /* _SessionMO.m */; };
+		270E10B8129B7F3B006133CA /* HandHistoryTable.xib in Resources */ = {isa = PBXBuildFile; fileRef = 270E10B5129B7F3B006133CA /* HandHistoryTable.xib */; };
+		270E10B9129B7F3B006133CA /* HistoryView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 270E10B6129B7F3B006133CA /* HistoryView.xib */; };
+		270E10BA129B7F3B006133CA /* SessionDetailsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 270E10B7129B7F3B006133CA /* SessionDetailsView.xib */; };
+		2715F40B120D4FD800888582 /* suits-big.png in Resources */ = {isa = PBXBuildFile; fileRef = 2715F40A120D4FD800888582 /* suits-big.png */; };
+		2715F4A5120DC6EF00888582 /* suits-small.png in Resources */ = {isa = PBXBuildFile; fileRef = 2715F4A4120DC6EF00888582 /* suits-small.png */; };
+		2715F4B3120DC8D400888582 /* suits-60.png in Resources */ = {isa = PBXBuildFile; fileRef = 2715F4B2120DC8D400888582 /* suits-60.png */; };
+		2715F5341212406200888582 /* ReturnViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 2715F5321212406200888582 /* ReturnViewController.mm */; };
+		272D549E11F5622B00ED990E /* HandDetailsView.m in Sources */ = {isa = PBXBuildFile; fileRef = 272D549B11F5622B00ED990E /* HandDetailsView.m */; };
+		272D549F11F5622B00ED990E /* HandDetailsViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 272D549D11F5622B00ED990E /* HandDetailsViewController.mm */; };
+		272D54A711F5626A00ED990E /* MainView.m in Sources */ = {isa = PBXBuildFile; fileRef = 272D54A411F5626A00ED990E /* MainView.m */; };
+		272D54A811F5626A00ED990E /* MainViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 272D54A611F5626A00ED990E /* MainViewController.mm */; };
+		272D54AE11F562B800ED990E /* HandDetailsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 272D54AA11F562B800ED990E /* HandDetailsView.xib */; };
+		272D54AF11F562B800ED990E /* MainView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 272D54AB11F562B800ED990E /* MainView.xib */; };
+		272D54B011F562B800ED990E /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 272D54AC11F562B800ED990E /* MainWindow.xib */; };
+		272D552511F6ABEC00ED990E /* HandDetailsTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 272D552411F6ABEC00ED990E /* HandDetailsTableCell.xib */; };
+		2762FCDA1E67711A00E35DC1 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2762FCD91E67711A00E35DC1 /* Default-568h@2x.png */; };
+		27778A3711BC622100EC74C0 /* Jacks.dat in Resources */ = {isa = PBXBuildFile; fileRef = 27778A3611BC622100EC74C0 /* Jacks.dat */; };
+		277C00BE1421A1C200A3F969 /* libCardLib.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 277C00BD1421A1C200A3F969 /* libCardLib.a */; };
+		2782F9D91201428700B4FF6D /* HandDetailsTitle.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2782F9D81201428700B4FF6D /* HandDetailsTitle.xib */; };
+		2782FD481207CDED00B4FF6D /* SolveViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 2782FD461207CDED00B4FF6D /* SolveViewController.mm */; };
+		2782FD501207CE3D00B4FF6D /* SolveView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2782FD4F1207CE3D00B4FF6D /* SolveView.xib */; };
+		2787222C121709DD004D477E /* CurrentHand.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2787222A121709DD004D477E /* CurrentHand.cpp */; };
+		278724591224B12C004D477E /* ChooseGameViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 278724571224B12C004D477E /* ChooseGameViewController.mm */; };
+		2787245A1224B12C004D477E /* ChooseGameView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 278724581224B12C004D477E /* ChooseGameView.xib */; };
+		2787266012277737004D477E /* PayScheduleViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 2787265E12277737004D477E /* PayScheduleViewController.mm */; };
+		2787266112277737004D477E /* PayScheduleView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2787265F12277737004D477E /* PayScheduleView.xib */; };
+		278727AB12331DCB004D477E /* PayScheduleView.mm in Sources */ = {isa = PBXBuildFile; fileRef = 278727AA12331DCB004D477E /* PayScheduleView.mm */; };
+		279642071254153000AE0FC9 /* ManagedObjects.xcdatamodel in Sources */ = {isa = PBXBuildFile; fileRef = 279642061254153000AE0FC9 /* ManagedObjects.xcdatamodel */; };
+		2796422F12542E3300AE0FC9 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2796422E12542E3300AE0FC9 /* CoreData.framework */; };
+		279A5289134A987600AD86C8 /* Bonus.dat in Resources */ = {isa = PBXBuildFile; fileRef = 279A5287134A987500AD86C8 /* Bonus.dat */; };
+		279A528A134A987600AD86C8 /* Jokers.dat in Resources */ = {isa = PBXBuildFile; fileRef = 279A5288134A987600AD86C8 /* Jokers.dat */; };
+		27B61C7511FB652700EE7454 /* GameModel.mm in Sources */ = {isa = PBXBuildFile; fileRef = 27B61C7411FB652700EE7454 /* GameModel.mm */; };
+		27B61F2511FEBDE100EE7454 /* CardTableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 27B61F2411FEBDE100EE7454 /* CardTableView.xib */; };
+		27B61F3E11FEBF2500EE7454 /* CardTableViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 27B61F3D11FEBF2500EE7454 /* CardTableViewController.mm */; };
+		288765590DF743DE002DB57D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 288765580DF743DE002DB57D /* CoreGraphics.framework */; };
+		289233A60DB2D0840083E9F9 /* FlipsideView.m in Sources */ = {isa = PBXBuildFile; fileRef = 289233A30DB2D0840083E9F9 /* FlipsideView.m */; };
+		289233B00DB2D0DB0083E9F9 /* FlipsideViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 289233AD0DB2D0DB0083E9F9 /* FlipsideViewController.mm */; };
+		CDA749CF10268E0D00D35C06 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CDA749CE10268E0D00D35C06 /* QuartzCore.framework */; };
+		CDA74B071027F11F00D35C06 /* blueback.png in Resources */ = {isa = PBXBuildFile; fileRef = CDA74B051027F11F00D35C06 /* blueback.png */; };
+		CDA74B081027F11F00D35C06 /* held.png in Resources */ = {isa = PBXBuildFile; fileRef = CDA74B061027F11F00D35C06 /* held.png */; };
+		CDFB556B1025076F0086ECE4 /* classic-playing-cards.png in Resources */ = {isa = PBXBuildFile; fileRef = CDFB556A1025076F0086ECE4 /* classic-playing-cards.png */; };
+		CDFB56791025200F0086ECE4 /* CardTableView.mm in Sources */ = {isa = PBXBuildFile; fileRef = CDFB56771025200F0086ECE4 /* CardTableView.mm */; };
+		CDFB567C102520710086ECE4 /* CardView.mm in Sources */ = {isa = PBXBuildFile; fileRef = CDFB567A102520710086ECE4 /* CardView.mm */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		1D30AB110D05D00D00671497 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		1D3623240D0F684500981E51 /* VideoPokerAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoPokerAppDelegate.h; sourceTree = "<group>"; };
+		1D3623250D0F684500981E51 /* VideoPokerAppDelegate.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = VideoPokerAppDelegate.mm; sourceTree = "<group>"; };
+		1D6058910D05DD3D006BFB54 /* VideoPoker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VideoPoker.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1DF5F4DF0D08C38300B7A737 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		270E03EF125ED830006133CA /* ReturnView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = ReturnView.xib; path = Resources/ReturnView.xib; sourceTree = "<group>"; };
+		270E04C81260F890006133CA /* UIStrokeLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UIStrokeLabel.h; path = Classes/UIStrokeLabel.h; sourceTree = "<group>"; };
+		270E04C91260F890006133CA /* UIStrokeLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UIStrokeLabel.m; path = Classes/UIStrokeLabel.m; sourceTree = "<group>"; };
+		270E06F912618251006133CA /* yellow-60-40.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "yellow-60-40.png"; path = "Resources/yellow-60-40.png"; sourceTree = "<group>"; };
+		270E08251263F40D006133CA /* yellow2-60-40.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "yellow2-60-40.png"; path = "Resources/yellow2-60-40.png"; sourceTree = "<group>"; };
+		270E09D0126D3F02006133CA /* OptionsView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = OptionsView.xib; path = Resources/OptionsView.xib; sourceTree = "<group>"; };
+		270E0B17127682A8006133CA /* Deuces.dat */ = {isa = PBXFileReference; lastKnownFileType = file; path = Deuces.dat; sourceTree = "<group>"; };
+		270E0B2212793CDD006133CA /* HistoryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HistoryViewController.h; path = Classes/HistoryViewController.h; sourceTree = "<group>"; };
+		270E0B2312793CDD006133CA /* HistoryViewController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = HistoryViewController.mm; path = Classes/HistoryViewController.mm; sourceTree = "<group>"; };
+		270E0BA9127AA024006133CA /* SessionTableCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = SessionTableCell.xib; path = Resources/SessionTableCell.xib; sourceTree = "<group>"; };
+		270E0CCC127FA589006133CA /* DDBonus.dat */ = {isa = PBXFileReference; lastKnownFileType = file; path = DDBonus.dat; sourceTree = "<group>"; };
+		270E0CCD127FA589006133CA /* TDBonus.dat */ = {isa = PBXFileReference; lastKnownFileType = file; path = TDBonus.dat; sourceTree = "<group>"; };
+		270E0EBC12962EBB006133CA /* SessionDetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SessionDetailsViewController.h; path = Classes/SessionDetailsViewController.h; sourceTree = "<group>"; };
+		270E0EBD12962EBB006133CA /* SessionDetailsViewController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = SessionDetailsViewController.mm; path = Classes/SessionDetailsViewController.mm; sourceTree = "<group>"; };
+		270E0F291297885C006133CA /* FundingMO.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FundingMO.m; sourceTree = "<group>"; };
+		270E0F2B1297885E006133CA /* HandDataMO.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HandDataMO.m; sourceTree = "<group>"; };
+		270E0F2D1297885F006133CA /* HandMO.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = HandMO.mm; sourceTree = "<group>"; };
+		270E0F2F12978861006133CA /* SessionMO.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = SessionMO.mm; sourceTree = "<group>"; };
+		270E0F3112978862006133CA /* FundingMO.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FundingMO.h; sourceTree = "<group>"; };
+		270E0F3212978863006133CA /* HandDataMO.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HandDataMO.h; sourceTree = "<group>"; };
+		270E0F3312978865006133CA /* HandMO.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HandMO.h; sourceTree = "<group>"; };
+		270E0F3412978866006133CA /* SessionMO.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SessionMO.h; sourceTree = "<group>"; };
+		270E0F3512978867006133CA /* _FundingMO.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = _FundingMO.m; sourceTree = "<group>"; };
+		270E0F3712978869006133CA /* _HandDataMO.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = _HandDataMO.m; sourceTree = "<group>"; };
+		270E0F391297886A006133CA /* _HandMO.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = _HandMO.m; sourceTree = "<group>"; };
+		270E0F3B1297886C006133CA /* _SessionMO.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = _SessionMO.m; sourceTree = "<group>"; };
+		270E0F3D1297886D006133CA /* _FundingMO.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = _FundingMO.h; sourceTree = "<group>"; };
+		270E0F3E1297886F006133CA /* _HandDataMO.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = _HandDataMO.h; sourceTree = "<group>"; };
+		270E0F3F12978870006133CA /* _HandMO.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = _HandMO.h; sourceTree = "<group>"; };
+		270E0F4012978871006133CA /* _SessionMO.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = _SessionMO.h; sourceTree = "<group>"; };
+		270E10B5129B7F3B006133CA /* HandHistoryTable.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = HandHistoryTable.xib; path = Resources/HandHistoryTable.xib; sourceTree = "<group>"; };
+		270E10B6129B7F3B006133CA /* HistoryView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = HistoryView.xib; path = Resources/HistoryView.xib; sourceTree = "<group>"; };
+		270E10B7129B7F3B006133CA /* SessionDetailsView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = SessionDetailsView.xib; path = Resources/SessionDetailsView.xib; sourceTree = "<group>"; };
+		2715F40A120D4FD800888582 /* suits-big.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "suits-big.png"; path = "Resources/suits-big.png"; sourceTree = "<group>"; };
+		2715F4A4120DC6EF00888582 /* suits-small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "suits-small.png"; path = "Resources/suits-small.png"; sourceTree = "<group>"; };
+		2715F4B2120DC8D400888582 /* suits-60.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "suits-60.png"; path = "Resources/suits-60.png"; sourceTree = "<group>"; };
+		2715F5311212406200888582 /* ReturnViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ReturnViewController.h; path = Classes/ReturnViewController.h; sourceTree = "<group>"; };
+		2715F5321212406200888582 /* ReturnViewController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = ReturnViewController.mm; path = Classes/ReturnViewController.mm; sourceTree = "<group>"; };
+		272D549A11F5622B00ED990E /* HandDetailsView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HandDetailsView.h; path = Classes/HandDetailsView.h; sourceTree = "<group>"; };
+		272D549B11F5622B00ED990E /* HandDetailsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HandDetailsView.m; path = Classes/HandDetailsView.m; sourceTree = "<group>"; };
+		272D549C11F5622B00ED990E /* HandDetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HandDetailsViewController.h; path = Classes/HandDetailsViewController.h; sourceTree = "<group>"; };
+		272D549D11F5622B00ED990E /* HandDetailsViewController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = HandDetailsViewController.mm; path = Classes/HandDetailsViewController.mm; sourceTree = "<group>"; };
+		272D54A311F5626A00ED990E /* MainView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MainView.h; path = Classes/MainView.h; sourceTree = "<group>"; };
+		272D54A411F5626A00ED990E /* MainView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MainView.m; path = Classes/MainView.m; sourceTree = "<group>"; };
+		272D54A511F5626A00ED990E /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MainViewController.h; path = Classes/MainViewController.h; sourceTree = "<group>"; };
+		272D54A611F5626A00ED990E /* MainViewController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = MainViewController.mm; path = Classes/MainViewController.mm; sourceTree = "<group>"; };
+		272D54AA11F562B800ED990E /* HandDetailsView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = HandDetailsView.xib; path = Resources/HandDetailsView.xib; sourceTree = "<group>"; };
+		272D54AB11F562B800ED990E /* MainView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = MainView.xib; path = Resources/MainView.xib; sourceTree = "<group>"; };
+		272D54AC11F562B800ED990E /* MainWindow.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = MainWindow.xib; path = Resources/MainWindow.xib; sourceTree = "<group>"; };
+		272D552411F6ABEC00ED990E /* HandDetailsTableCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = HandDetailsTableCell.xib; path = Resources/HandDetailsTableCell.xib; sourceTree = "<group>"; };
+		2762FCD91E67711A00E35DC1 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		27778A3611BC622100EC74C0 /* Jacks.dat */ = {isa = PBXFileReference; lastKnownFileType = file; path = Jacks.dat; sourceTree = "<group>"; };
+		277C00BD1421A1C200A3F969 /* libCardLib.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libCardLib.a; path = "../../../../../../../../Code/CardLib/xcode/build/Release Simulator 4.x-iphoneos/libCardLib.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2782F9D81201428700B4FF6D /* HandDetailsTitle.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = HandDetailsTitle.xib; path = Resources/HandDetailsTitle.xib; sourceTree = "<group>"; };
+		2782FD451207CDED00B4FF6D /* SolveViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SolveViewController.h; path = Classes/SolveViewController.h; sourceTree = "<group>"; };
+		2782FD461207CDED00B4FF6D /* SolveViewController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = SolveViewController.mm; path = Classes/SolveViewController.mm; sourceTree = "<group>"; };
+		2782FD4F1207CE3D00B4FF6D /* SolveView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = SolveView.xib; path = Resources/SolveView.xib; sourceTree = "<group>"; };
+		2787222A121709DD004D477E /* CurrentHand.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = CurrentHand.cpp; path = Classes/CurrentHand.cpp; sourceTree = "<group>"; };
+		2787222B121709DD004D477E /* CurrentHand.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = CurrentHand.hpp; path = Classes/CurrentHand.hpp; sourceTree = "<group>"; };
+		278724561224B12C004D477E /* ChooseGameViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ChooseGameViewController.h; path = Classes/ChooseGameViewController.h; sourceTree = "<group>"; };
+		278724571224B12C004D477E /* ChooseGameViewController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = ChooseGameViewController.mm; path = Classes/ChooseGameViewController.mm; sourceTree = "<group>"; };
+		278724581224B12C004D477E /* ChooseGameView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = ChooseGameView.xib; path = Resources/ChooseGameView.xib; sourceTree = "<group>"; };
+		2787265D12277737004D477E /* PayScheduleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PayScheduleViewController.h; path = Classes/PayScheduleViewController.h; sourceTree = "<group>"; };
+		2787265E12277737004D477E /* PayScheduleViewController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = PayScheduleViewController.mm; path = Classes/PayScheduleViewController.mm; sourceTree = "<group>"; };
+		2787265F12277737004D477E /* PayScheduleView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = PayScheduleView.xib; path = Resources/PayScheduleView.xib; sourceTree = "<group>"; };
+		278727A912331DCB004D477E /* PayScheduleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PayScheduleView.h; path = Classes/PayScheduleView.h; sourceTree = "<group>"; };
+		278727AA12331DCB004D477E /* PayScheduleView.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = PayScheduleView.mm; path = Classes/PayScheduleView.mm; sourceTree = "<group>"; };
+		27963E08124C89AC00AE0FC9 /* Platform.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Platform.h; path = ../Common/Platform.h; sourceTree = SOURCE_ROOT; };
+		27963E09124C89E300AE0FC9 /* include.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = include.h; path = ../Common/xcode/include.h; sourceTree = SOURCE_ROOT; };
+		279642061254153000AE0FC9 /* ManagedObjects.xcdatamodel */ = {isa = PBXFileReference; comments = xmod; fileEncoding = 4; lastKnownFileType = wrapper.xcdatamodel; path = ManagedObjects.xcdatamodel; sourceTree = "<group>"; };
+		2796422E12542E3300AE0FC9 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		279A5287134A987500AD86C8 /* Bonus.dat */ = {isa = PBXFileReference; lastKnownFileType = file; path = Bonus.dat; sourceTree = "<group>"; };
+		279A5288134A987600AD86C8 /* Jokers.dat */ = {isa = PBXFileReference; lastKnownFileType = file; path = Jokers.dat; sourceTree = "<group>"; };
+		27B61C7311FB652700EE7454 /* GameModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GameModel.h; path = Classes/GameModel.h; sourceTree = "<group>"; };
+		27B61C7411FB652700EE7454 /* GameModel.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = GameModel.mm; path = Classes/GameModel.mm; sourceTree = "<group>"; };
+		27B61F2411FEBDE100EE7454 /* CardTableView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = CardTableView.xib; path = Resources/CardTableView.xib; sourceTree = "<group>"; };
+		27B61F3C11FEBF2500EE7454 /* CardTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CardTableViewController.h; path = Classes/CardTableViewController.h; sourceTree = "<group>"; };
+		27B61F3D11FEBF2500EE7454 /* CardTableViewController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = CardTableViewController.mm; path = Classes/CardTableViewController.mm; sourceTree = "<group>"; };
+		288765580DF743DE002DB57D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		289233A20DB2D0840083E9F9 /* FlipsideView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FlipsideView.h; path = Classes/FlipsideView.h; sourceTree = "<group>"; };
+		289233A30DB2D0840083E9F9 /* FlipsideView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FlipsideView.m; path = Classes/FlipsideView.m; sourceTree = "<group>"; };
+		289233AC0DB2D0DB0083E9F9 /* FlipsideViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FlipsideViewController.h; path = Classes/FlipsideViewController.h; sourceTree = "<group>"; };
+		289233AD0DB2D0DB0083E9F9 /* FlipsideViewController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = FlipsideViewController.mm; path = Classes/FlipsideViewController.mm; sourceTree = "<group>"; };
+		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		32CA4F630368D1EE00C91783 /* VideoPoker_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoPoker_Prefix.pch; sourceTree = "<group>"; };
+		8D1107310486CEB800E47090 /* VideoPoker-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "VideoPoker-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
+		CDA749CE10268E0D00D35C06 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = /System/Library/Frameworks/QuartzCore.framework; sourceTree = "<absolute>"; };
+		CDA74B051027F11F00D35C06 /* blueback.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = blueback.png; path = Resources/blueback.png; sourceTree = "<group>"; };
+		CDA74B061027F11F00D35C06 /* held.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = held.png; path = Resources/held.png; sourceTree = "<group>"; };
+		CDA751C6102E650A00D35C06 /* Win32Port.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Win32Port.h; sourceTree = "<group>"; };
+		CDFB556A1025076F0086ECE4 /* classic-playing-cards.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "classic-playing-cards.png"; path = "Resources/classic-playing-cards.png"; sourceTree = "<group>"; };
+		CDFB56771025200F0086ECE4 /* CardTableView.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = CardTableView.mm; path = Classes/CardTableView.mm; sourceTree = "<group>"; };
+		CDFB56781025200F0086ECE4 /* CardTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CardTableView.h; path = Classes/CardTableView.h; sourceTree = "<group>"; };
+		CDFB567A102520710086ECE4 /* CardView.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = CardView.mm; path = ../CardView.mm; sourceTree = "<group>"; };
+		CDFB567B102520710086ECE4 /* CardView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CardView.h; path = Classes/CardView.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1D60588F0D05DD3D006BFB54 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				277C00BE1421A1C200A3F969 /* libCardLib.a in Frameworks */,
+				1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */,
+				1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */,
+				288765590DF743DE002DB57D /* CoreGraphics.framework in Frameworks */,
+				CDA749CF10268E0D00D35C06 /* QuartzCore.framework in Frameworks */,
+				2796422F12542E3300AE0FC9 /* CoreData.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		080E96DDFE201D6D7F000001 /* ApplicationDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				1D3623240D0F684500981E51 /* VideoPokerAppDelegate.h */,
+				1D3623250D0F684500981E51 /* VideoPokerAppDelegate.mm */,
+			);
+			name = ApplicationDelegate;
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		19C28FACFE9D520D11CA2CBB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1D6058910D05DD3D006BFB54 /* VideoPoker.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		270E01D2125C1E5D006133CA /* ManagedObjects */ = {
+			isa = PBXGroup;
+			children = (
+				270E0F291297885C006133CA /* FundingMO.m */,
+				270E0F2B1297885E006133CA /* HandDataMO.m */,
+				270E0F2D1297885F006133CA /* HandMO.mm */,
+				270E0F2F12978861006133CA /* SessionMO.mm */,
+				270E0F3112978862006133CA /* FundingMO.h */,
+				270E0F3212978863006133CA /* HandDataMO.h */,
+				270E0F3312978865006133CA /* HandMO.h */,
+				270E0F3412978866006133CA /* SessionMO.h */,
+				270E0F3512978867006133CA /* _FundingMO.m */,
+				270E0F3712978869006133CA /* _HandDataMO.m */,
+				270E0F391297886A006133CA /* _HandMO.m */,
+				270E0F3B1297886C006133CA /* _SessionMO.m */,
+				270E0F3D1297886D006133CA /* _FundingMO.h */,
+				270E0F3E1297886F006133CA /* _HandDataMO.h */,
+				270E0F3F12978870006133CA /* _HandMO.h */,
+				270E0F4012978871006133CA /* _SessionMO.h */,
+			);
+			path = ManagedObjects;
+			sourceTree = "<group>";
+		};
+		270E0B2112793CBA006133CA /* HistoryView */ = {
+			isa = PBXGroup;
+			children = (
+				270E0B2212793CDD006133CA /* HistoryViewController.h */,
+				270E0B2312793CDD006133CA /* HistoryViewController.mm */,
+				270E0BA9127AA024006133CA /* SessionTableCell.xib */,
+				270E0EBC12962EBB006133CA /* SessionDetailsViewController.h */,
+				270E0EBD12962EBB006133CA /* SessionDetailsViewController.mm */,
+				270E10B5129B7F3B006133CA /* HandHistoryTable.xib */,
+				270E10B6129B7F3B006133CA /* HistoryView.xib */,
+				270E10B7129B7F3B006133CA /* SessionDetailsView.xib */,
+			);
+			name = HistoryView;
+			sourceTree = "<group>";
+		};
+		2715F52E12123F5F00888582 /* ReturnView */ = {
+			isa = PBXGroup;
+			children = (
+				2715F5311212406200888582 /* ReturnViewController.h */,
+				2715F5321212406200888582 /* ReturnViewController.mm */,
+				270E03EF125ED830006133CA /* ReturnView.xib */,
+			);
+			name = ReturnView;
+			sourceTree = "<group>";
+		};
+		272D548A11F55FD800ED990E /* HandDetailsView */ = {
+			isa = PBXGroup;
+			children = (
+				272D549A11F5622B00ED990E /* HandDetailsView.h */,
+				272D549B11F5622B00ED990E /* HandDetailsView.m */,
+				272D549C11F5622B00ED990E /* HandDetailsViewController.h */,
+				272D549D11F5622B00ED990E /* HandDetailsViewController.mm */,
+				27B61F4611FFD1C900EE7454 /* Resources */,
+			);
+			name = HandDetailsView;
+			sourceTree = "<group>";
+		};
+		272D54A211F5625100ED990E /* TrainView */ = {
+			isa = PBXGroup;
+			children = (
+				272D54A311F5626A00ED990E /* MainView.h */,
+				272D54A411F5626A00ED990E /* MainView.m */,
+				272D54A511F5626A00ED990E /* MainViewController.h */,
+				272D54A611F5626A00ED990E /* MainViewController.mm */,
+				272D54AB11F562B800ED990E /* MainView.xib */,
+			);
+			name = TrainView;
+			sourceTree = "<group>";
+		};
+		27778A3511BC622100EC74C0 /* SolverData */ = {
+			isa = PBXGroup;
+			children = (
+				279A5287134A987500AD86C8 /* Bonus.dat */,
+				279A5288134A987600AD86C8 /* Jokers.dat */,
+				270E0CCC127FA589006133CA /* DDBonus.dat */,
+				270E0CCD127FA589006133CA /* TDBonus.dat */,
+				270E0B17127682A8006133CA /* Deuces.dat */,
+				27778A3611BC622100EC74C0 /* Jacks.dat */,
+			);
+			name = SolverData;
+			path = ../SolverData;
+			sourceTree = SOURCE_ROOT;
+		};
+		2782FD441207CDC800B4FF6D /* SolveView */ = {
+			isa = PBXGroup;
+			children = (
+				2782FD451207CDED00B4FF6D /* SolveViewController.h */,
+				2782FD461207CDED00B4FF6D /* SolveViewController.mm */,
+				2782FD4F1207CE3D00B4FF6D /* SolveView.xib */,
+			);
+			name = SolveView;
+			sourceTree = "<group>";
+		};
+		278724551224B0C8004D477E /* ChooseGameView */ = {
+			isa = PBXGroup;
+			children = (
+				278724561224B12C004D477E /* ChooseGameViewController.h */,
+				278724571224B12C004D477E /* ChooseGameViewController.mm */,
+				278724581224B12C004D477E /* ChooseGameView.xib */,
+			);
+			name = ChooseGameView;
+			sourceTree = "<group>";
+		};
+		2787265A12277707004D477E /* PayScheduleView */ = {
+			isa = PBXGroup;
+			children = (
+				278727A912331DCB004D477E /* PayScheduleView.h */,
+				278727AA12331DCB004D477E /* PayScheduleView.mm */,
+				2787265D12277737004D477E /* PayScheduleViewController.h */,
+				2787265E12277737004D477E /* PayScheduleViewController.mm */,
+				2787265F12277737004D477E /* PayScheduleView.xib */,
+			);
+			name = PayScheduleView;
+			sourceTree = "<group>";
+		};
+		27B61F4411FFD0E800EE7454 /* CardTableView */ = {
+			isa = PBXGroup;
+			children = (
+				CDFB56771025200F0086ECE4 /* CardTableView.mm */,
+				CDFB56781025200F0086ECE4 /* CardTableView.h */,
+				CDFB567A102520710086ECE4 /* CardView.mm */,
+				CDFB567B102520710086ECE4 /* CardView.h */,
+				27B61F3C11FEBF2500EE7454 /* CardTableViewController.h */,
+				27B61F3D11FEBF2500EE7454 /* CardTableViewController.mm */,
+				27B61F2411FEBDE100EE7454 /* CardTableView.xib */,
+			);
+			name = CardTableView;
+			sourceTree = "<group>";
+		};
+		27B61F4611FFD1C900EE7454 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				272D54AA11F562B800ED990E /* HandDetailsView.xib */,
+				272D552411F6ABEC00ED990E /* HandDetailsTableCell.xib */,
+				2782F9D81201428700B4FF6D /* HandDetailsTitle.xib */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		281C6CD70DB2D82200F60ACC /* OptionsView */ = {
+			isa = PBXGroup;
+			children = (
+				289233A20DB2D0840083E9F9 /* FlipsideView.h */,
+				289233A30DB2D0840083E9F9 /* FlipsideView.m */,
+				289233AC0DB2D0DB0083E9F9 /* FlipsideViewController.h */,
+				289233AD0DB2D0DB0083E9F9 /* FlipsideViewController.mm */,
+				270E09D0126D3F02006133CA /* OptionsView.xib */,
+			);
+			name = OptionsView;
+			sourceTree = "<group>";
+		};
+		29B97314FDCFA39411CA2CEA /* CustomTemplate */ = {
+			isa = PBXGroup;
+			children = (
+				2762FCD91E67711A00E35DC1 /* Default-568h@2x.png */,
+				277C00BD1421A1C200A3F969 /* libCardLib.a */,
+				CDFB556C102507A80086ECE4 /* Models */,
+				272D54A211F5625100ED990E /* TrainView */,
+				27B61F4411FFD0E800EE7454 /* CardTableView */,
+				2715F52E12123F5F00888582 /* ReturnView */,
+				272D548A11F55FD800ED990E /* HandDetailsView */,
+				278724551224B0C8004D477E /* ChooseGameView */,
+				2787265A12277707004D477E /* PayScheduleView */,
+				2782FD441207CDC800B4FF6D /* SolveView */,
+				270E0B2112793CBA006133CA /* HistoryView */,
+				281C6CD70DB2D82200F60ACC /* OptionsView */,
+				080E96DDFE201D6D7F000001 /* ApplicationDelegate */,
+				29B97315FDCFA39411CA2CEA /* Other Sources */,
+				29B97317FDCFA39411CA2CEA /* Resources */,
+				29B97323FDCFA39411CA2CEA /* Frameworks */,
+				19C28FACFE9D520D11CA2CBB /* Products */,
+			);
+			name = CustomTemplate;
+			sourceTree = "<group>";
+		};
+		29B97315FDCFA39411CA2CEA /* Other Sources */ = {
+			isa = PBXGroup;
+			children = (
+				27963E09124C89E300AE0FC9 /* include.h */,
+				27963E08124C89AC00AE0FC9 /* Platform.h */,
+				29B97316FDCFA39411CA2CEA /* main.m */,
+				CDA751C6102E650A00D35C06 /* Win32Port.h */,
+				270E04C81260F890006133CA /* UIStrokeLabel.h */,
+				270E04C91260F890006133CA /* UIStrokeLabel.m */,
+				32CA4F630368D1EE00C91783 /* VideoPoker_Prefix.pch */,
+			);
+			name = "Other Sources";
+			sourceTree = "<group>";
+		};
+		29B97317FDCFA39411CA2CEA /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				270E08251263F40D006133CA /* yellow2-60-40.png */,
+				270E06F912618251006133CA /* yellow-60-40.png */,
+				CDA74B051027F11F00D35C06 /* blueback.png */,
+				CDFB556A1025076F0086ECE4 /* classic-playing-cards.png */,
+				CDA74B061027F11F00D35C06 /* held.png */,
+				2715F4B2120DC8D400888582 /* suits-60.png */,
+				2715F40A120D4FD800888582 /* suits-big.png */,
+				2715F4A4120DC6EF00888582 /* suits-small.png */,
+				272D54AC11F562B800ED990E /* MainWindow.xib */,
+				8D1107310486CEB800E47090 /* VideoPoker-Info.plist */,
+				27778A3511BC622100EC74C0 /* SolverData */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CDA749CE10268E0D00D35C06 /* QuartzCore.framework */,
+				1DF5F4DF0D08C38300B7A737 /* UIKit.framework */,
+				1D30AB110D05D00D00671497 /* Foundation.framework */,
+				288765580DF743DE002DB57D /* CoreGraphics.framework */,
+				2796422E12542E3300AE0FC9 /* CoreData.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CDFB556C102507A80086ECE4 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				279642061254153000AE0FC9 /* ManagedObjects.xcdatamodel */,
+				2787222A121709DD004D477E /* CurrentHand.cpp */,
+				2787222B121709DD004D477E /* CurrentHand.hpp */,
+				27B61C7311FB652700EE7454 /* GameModel.h */,
+				27B61C7411FB652700EE7454 /* GameModel.mm */,
+				270E01D2125C1E5D006133CA /* ManagedObjects */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1D6058900D05DD3D006BFB54 /* VideoPoker */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1D6058960D05DD3E006BFB54 /* Build configuration list for PBXNativeTarget "VideoPoker" */;
+			buildPhases = (
+				1D60588D0D05DD3D006BFB54 /* Resources */,
+				278BE62F11AB811200CB93E5 /* Touch SolverData script */,
+				1D60588E0D05DD3D006BFB54 /* Sources */,
+				1D60588F0D05DD3D006BFB54 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = VideoPoker;
+			productName = VideoPoker;
+			productReference = 1D6058910D05DD3D006BFB54 /* VideoPoker.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		29B97313FDCFA39411CA2CEA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0640;
+				ORGANIZATIONNAME = "Mike McQueen";
+			};
+			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "VideoPoker" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 1;
+			knownRegions = (
+				English,
+				Japanese,
+				French,
+				German,
+				en,
+			);
+			mainGroup = 29B97314FDCFA39411CA2CEA /* CustomTemplate */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1D6058900D05DD3D006BFB54 /* VideoPoker */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1D60588D0D05DD3D006BFB54 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CDFB556B1025076F0086ECE4 /* classic-playing-cards.png in Resources */,
+				CDA74B071027F11F00D35C06 /* blueback.png in Resources */,
+				CDA74B081027F11F00D35C06 /* held.png in Resources */,
+				27778A3711BC622100EC74C0 /* Jacks.dat in Resources */,
+				272D54AE11F562B800ED990E /* HandDetailsView.xib in Resources */,
+				272D54AF11F562B800ED990E /* MainView.xib in Resources */,
+				272D54B011F562B800ED990E /* MainWindow.xib in Resources */,
+				272D552511F6ABEC00ED990E /* HandDetailsTableCell.xib in Resources */,
+				27B61F2511FEBDE100EE7454 /* CardTableView.xib in Resources */,
+				2782F9D91201428700B4FF6D /* HandDetailsTitle.xib in Resources */,
+				2782FD501207CE3D00B4FF6D /* SolveView.xib in Resources */,
+				2715F40B120D4FD800888582 /* suits-big.png in Resources */,
+				2715F4A5120DC6EF00888582 /* suits-small.png in Resources */,
+				2715F4B3120DC8D400888582 /* suits-60.png in Resources */,
+				2787245A1224B12C004D477E /* ChooseGameView.xib in Resources */,
+				2787266112277737004D477E /* PayScheduleView.xib in Resources */,
+				270E03F0125ED830006133CA /* ReturnView.xib in Resources */,
+				270E06FA12618251006133CA /* yellow-60-40.png in Resources */,
+				270E08261263F40D006133CA /* yellow2-60-40.png in Resources */,
+				270E09D1126D3F02006133CA /* OptionsView.xib in Resources */,
+				270E0B18127682A8006133CA /* Deuces.dat in Resources */,
+				270E0BAA127AA024006133CA /* SessionTableCell.xib in Resources */,
+				270E0CCE127FA589006133CA /* DDBonus.dat in Resources */,
+				2762FCDA1E67711A00E35DC1 /* Default-568h@2x.png in Resources */,
+				270E0CCF127FA589006133CA /* TDBonus.dat in Resources */,
+				270E10B8129B7F3B006133CA /* HandHistoryTable.xib in Resources */,
+				270E10B9129B7F3B006133CA /* HistoryView.xib in Resources */,
+				270E10BA129B7F3B006133CA /* SessionDetailsView.xib in Resources */,
+				279A5289134A987600AD86C8 /* Bonus.dat in Resources */,
+				279A528A134A987600AD86C8 /* Jokers.dat in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		278BE62F11AB811200CB93E5 /* Touch SolverData script */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Touch SolverData script";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/tcsh;
+			shellScript = "touch -cm ${SRCROOT}/../SolverData";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1D60588E0D05DD3D006BFB54 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1D60589B0D05DD56006BFB54 /* main.m in Sources */,
+				1D3623260D0F684500981E51 /* VideoPokerAppDelegate.mm in Sources */,
+				289233A60DB2D0840083E9F9 /* FlipsideView.m in Sources */,
+				289233B00DB2D0DB0083E9F9 /* FlipsideViewController.mm in Sources */,
+				CDFB56791025200F0086ECE4 /* CardTableView.mm in Sources */,
+				CDFB567C102520710086ECE4 /* CardView.mm in Sources */,
+				272D549E11F5622B00ED990E /* HandDetailsView.m in Sources */,
+				272D549F11F5622B00ED990E /* HandDetailsViewController.mm in Sources */,
+				272D54A711F5626A00ED990E /* MainView.m in Sources */,
+				272D54A811F5626A00ED990E /* MainViewController.mm in Sources */,
+				27B61C7511FB652700EE7454 /* GameModel.mm in Sources */,
+				27B61F3E11FEBF2500EE7454 /* CardTableViewController.mm in Sources */,
+				2782FD481207CDED00B4FF6D /* SolveViewController.mm in Sources */,
+				2715F5341212406200888582 /* ReturnViewController.mm in Sources */,
+				2787222C121709DD004D477E /* CurrentHand.cpp in Sources */,
+				278724591224B12C004D477E /* ChooseGameViewController.mm in Sources */,
+				2787266012277737004D477E /* PayScheduleViewController.mm in Sources */,
+				278727AB12331DCB004D477E /* PayScheduleView.mm in Sources */,
+				279642071254153000AE0FC9 /* ManagedObjects.xcdatamodel in Sources */,
+				270E04CA1260F890006133CA /* UIStrokeLabel.m in Sources */,
+				270E0B2512793CDD006133CA /* HistoryViewController.mm in Sources */,
+				270E0EBF12962EBB006133CA /* SessionDetailsViewController.mm in Sources */,
+				270E0F2A1297885D006133CA /* FundingMO.m in Sources */,
+				270E0F2C1297885F006133CA /* HandDataMO.m in Sources */,
+				270E0F2E12978860006133CA /* HandMO.mm in Sources */,
+				270E0F3012978862006133CA /* SessionMO.mm in Sources */,
+				270E0F3612978868006133CA /* _FundingMO.m in Sources */,
+				270E0F381297886A006133CA /* _HandDataMO.m in Sources */,
+				270E0F3A1297886B006133CA /* _HandMO.m in Sources */,
+				270E0F3C1297886D006133CA /* _SessionMO.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		1D6058940D05DD3E006BFB54 /* Debug iPhone 3.2 */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libstdc++";
+				CODE_SIGN_ENTITLEMENTS = "";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = VideoPoker_Prefix.pch;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				HEADER_SEARCH_PATHS = ../Common;
+				INFOPLIST_FILE = "VideoPoker-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LIBRARY_SEARCH_PATHS = "";
+				PRODUCT_NAME = VideoPoker;
+				PROVISIONING_PROFILE = "";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
+				TARGETED_DEVICE_FAMILY = 1;
+				USER_HEADER_SEARCH_PATHS = "../Common ../CardLib/**";
+			};
+			name = "Debug iPhone 3.2";
+		};
+		1D6058950D05DD3E006BFB54 /* Release iPhone 3.2 */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libstdc++";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = VideoPoker_Prefix.pch;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				HEADER_SEARCH_PATHS = ../Common;
+				INFOPLIST_FILE = "VideoPoker-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LIBRARY_SEARCH_PATHS = "";
+				PRODUCT_NAME = VideoPoker;
+				PROVISIONING_PROFILE = "";
+				TARGETED_DEVICE_FAMILY = 1;
+				USER_HEADER_SEARCH_PATHS = "../Common ../CardLib/**";
+			};
+			name = "Release iPhone 3.2";
+		};
+		27A04D4311F28CC2003E1DA2 /* Debug Simulator 3.2 */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = ../Common;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
+				LIBRARY_SEARCH_PATHS = "";
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SYMROOT = build;
+				USER_HEADER_SEARCH_PATHS = "$(CARDLIB_SRC)/**";
+				VALID_ARCHS = "armv6 armv7 i386 x86_64";
+			};
+			name = "Debug Simulator 3.2";
+		};
+		27A04D4411F28CC2003E1DA2 /* Debug Simulator 3.2 */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libstdc++";
+				CODE_SIGN_ENTITLEMENTS = "";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = VideoPoker_Prefix.pch;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				HEADER_SEARCH_PATHS = ../Common;
+				INFOPLIST_FILE = "VideoPoker-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LIBRARY_SEARCH_PATHS = "";
+				PRODUCT_NAME = VideoPoker;
+				TARGETED_DEVICE_FAMILY = 1;
+				USER_HEADER_SEARCH_PATHS = "../Common ../CardLib/**";
+			};
+			name = "Debug Simulator 3.2";
+		};
+		27A04D4511F28CC5003E1DA2 /* Release Simulator 3.2 */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = ../Common;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
+				LIBRARY_SEARCH_PATHS = "";
+				ONLY_ACTIVE_ARCH = YES;
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
+				SDKROOT = iphoneos;
+				SYMROOT = build;
+				USER_HEADER_SEARCH_PATHS = "$(CARDLIB_SRC)/**";
+				VALID_ARCHS = "armv6 armv7 i386 x86_64";
+			};
+			name = "Release Simulator 3.2";
+		};
+		27A04D4611F28CC5003E1DA2 /* Release Simulator 3.2 */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libstdc++";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				COPY_PHASE_STRIP = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = VideoPoker_Prefix.pch;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				HEADER_SEARCH_PATHS = ../Common;
+				INFOPLIST_FILE = "VideoPoker-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LIBRARY_SEARCH_PATHS = "";
+				PRODUCT_NAME = VideoPoker;
+				TARGETED_DEVICE_FAMILY = 1;
+				USER_HEADER_SEARCH_PATHS = "../Common ../CardLib/**";
+			};
+			name = "Release Simulator 3.2";
+		};
+		27A04D4711F28CC8003E1DA2 /* Release iPhone 4.x */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = ../Common;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
+				LIBRARY_SEARCH_PATHS = "";
+				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE = "";
+				SDKROOT = iphoneos;
+				SYMROOT = build;
+				USER_HEADER_SEARCH_PATHS = "$(CARDLIB_SRC)/**";
+				VALID_ARCHS = "armv6 armv7 i386 x86_64";
+			};
+			name = "Release iPhone 4.x";
+		};
+		27A04D4811F28CC8003E1DA2 /* Release iPhone 4.x */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libstdc++";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = VideoPoker_Prefix.pch;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				HEADER_SEARCH_PATHS = ../Common;
+				INFOPLIST_FILE = "VideoPoker-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LIBRARY_SEARCH_PATHS = "";
+				PRODUCT_NAME = VideoPoker;
+				PROVISIONING_PROFILE = "";
+				TARGETED_DEVICE_FAMILY = 1;
+				USER_HEADER_SEARCH_PATHS = "../Common ../CardLib/**";
+			};
+			name = "Release iPhone 4.x";
+		};
+		27A04D4911F28CCB003E1DA2 /* Debug iPhone 4.x */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = ../Common;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
+				LIBRARY_SEARCH_PATHS = "";
+				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE = "";
+				SDKROOT = iphoneos;
+				SYMROOT = build;
+				USER_HEADER_SEARCH_PATHS = "$(CARDLIB_SRC)/**";
+				VALID_ARCHS = "armv6 armv7 i386 x86_64";
+			};
+			name = "Debug iPhone 4.x";
+		};
+		27A04D4A11F28CCB003E1DA2 /* Debug iPhone 4.x */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libstdc++";
+				CODE_SIGN_ENTITLEMENTS = "";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = VideoPoker_Prefix.pch;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				HEADER_SEARCH_PATHS = ../Common;
+				INFOPLIST_FILE = "VideoPoker-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LIBRARY_SEARCH_PATHS = "";
+				PRODUCT_NAME = VideoPoker;
+				PROVISIONING_PROFILE = "";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
+				TARGETED_DEVICE_FAMILY = 1;
+				USER_HEADER_SEARCH_PATHS = "../Common ../CardLib/**";
+			};
+			name = "Debug iPhone 4.x";
+		};
+		27A04D4B11F28CEA003E1DA2 /* Debug Simulator 4.x */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = ../Common;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
+				LIBRARY_SEARCH_PATHS = "";
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SYMROOT = build;
+				USER_HEADER_SEARCH_PATHS = "$(CARDLIB_SRC)/**";
+				VALID_ARCHS = "armv6 armv7 i386 x86_64";
+			};
+			name = "Debug Simulator 4.x";
+		};
+		27A04D4C11F28CEA003E1DA2 /* Debug Simulator 4.x */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libstdc++";
+				CODE_SIGN_ENTITLEMENTS = "";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = VideoPoker_Prefix.pch;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				HEADER_SEARCH_PATHS = ../Common;
+				INFOPLIST_FILE = "VideoPoker-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LIBRARY_SEARCH_PATHS = "";
+				PRODUCT_NAME = VideoPoker;
+				TARGETED_DEVICE_FAMILY = 1;
+				USER_HEADER_SEARCH_PATHS = "../Common ../CardLib/**";
+			};
+			name = "Debug Simulator 4.x";
+		};
+		27A04D4D11F28CED003E1DA2 /* Release Simulator 4.x */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = ../Common;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
+				LIBRARY_SEARCH_PATHS = "";
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SYMROOT = build;
+				USER_HEADER_SEARCH_PATHS = "$(CARDLIB_SRC)/**";
+				VALID_ARCHS = "armv6 armv7 i386 x86_64";
+			};
+			name = "Release Simulator 4.x";
+		};
+		27A04D4E11F28CED003E1DA2 /* Release Simulator 4.x */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libstdc++";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				COPY_PHASE_STRIP = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = VideoPoker_Prefix.pch;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				HEADER_SEARCH_PATHS = ../Common;
+				INFOPLIST_FILE = "VideoPoker-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LIBRARY_SEARCH_PATHS = "";
+				PRODUCT_NAME = VideoPoker;
+				TARGETED_DEVICE_FAMILY = 1;
+				USER_HEADER_SEARCH_PATHS = "../Common ../CardLib/**";
+			};
+			name = "Release Simulator 4.x";
+		};
+		C01FCF4F08A954540054247B /* Debug iPhone 3.2 */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = ../Common;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
+				LIBRARY_SEARCH_PATHS = "";
+				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE = "";
+				SDKROOT = iphoneos;
+				SYMROOT = build;
+				USER_HEADER_SEARCH_PATHS = "$(CARDLIB_SRC)/**";
+				VALID_ARCHS = "armv6 armv7 i386 x86_64";
+			};
+			name = "Debug iPhone 3.2";
+		};
+		C01FCF5008A954540054247B /* Release iPhone 3.2 */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = ../Common;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
+				LIBRARY_SEARCH_PATHS = "";
+				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE = "";
+				SDKROOT = iphoneos;
+				SYMROOT = build;
+				USER_HEADER_SEARCH_PATHS = "$(CARDLIB_SRC)/**";
+				VALID_ARCHS = "armv6 armv7 i386 x86_64";
+			};
+			name = "Release iPhone 3.2";
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1D6058960D05DD3E006BFB54 /* Build configuration list for PBXNativeTarget "VideoPoker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1D6058940D05DD3E006BFB54 /* Debug iPhone 3.2 */,
+				27A04D4A11F28CCB003E1DA2 /* Debug iPhone 4.x */,
+				27A04D4411F28CC2003E1DA2 /* Debug Simulator 3.2 */,
+				27A04D4C11F28CEA003E1DA2 /* Debug Simulator 4.x */,
+				1D6058950D05DD3E006BFB54 /* Release iPhone 3.2 */,
+				27A04D4811F28CC8003E1DA2 /* Release iPhone 4.x */,
+				27A04D4611F28CC5003E1DA2 /* Release Simulator 3.2 */,
+				27A04D4E11F28CED003E1DA2 /* Release Simulator 4.x */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = "Debug Simulator 4.x";
+		};
+		C01FCF4E08A954540054247B /* Build configuration list for PBXProject "VideoPoker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C01FCF4F08A954540054247B /* Debug iPhone 3.2 */,
+				27A04D4911F28CCB003E1DA2 /* Debug iPhone 4.x */,
+				27A04D4311F28CC2003E1DA2 /* Debug Simulator 3.2 */,
+				27A04D4B11F28CEA003E1DA2 /* Debug Simulator 4.x */,
+				C01FCF5008A954540054247B /* Release iPhone 3.2 */,
+				27A04D4711F28CC8003E1DA2 /* Release iPhone 4.x */,
+				27A04D4511F28CC5003E1DA2 /* Release Simulator 3.2 */,
+				27A04D4D11F28CED003E1DA2 /* Release Simulator 4.x */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = "Debug Simulator 4.x";
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 29B97313FDCFA39411CA2CEA /* Project object */;
+}
