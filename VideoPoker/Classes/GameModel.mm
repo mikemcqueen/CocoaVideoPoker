@@ -11,6 +11,7 @@
 #import "SessionMO.h"
 #import "HandMO.h"
 #import "HandDataMO.h"
+#import "FundingMO.h"
 #import "VideoPokerAppDelegate.h"
 
 #include "SolverDataLookup.hpp"
@@ -109,6 +110,16 @@ loadOrStartNewSession
                                          balance:defaultBalance
                                     denomination:defaultDenomination];
         }
+        if (![GameModel hasSolverDataForGame: (Game::Id_t)_session.gameIdValue])
+        {
+            NSLog(@"No solver data for saved game %d - starting default game", _session.gameIdValue);
+            int oldBalance = _session.balanceValue;
+            int oldDenomination = _session.denominationValue;
+            self.session = [self startNewSession:defaultGameId
+                                      withReturn:defaultReturn
+                                         balance:oldBalance
+                                    denomination:oldDenomination];
+        }
         [self setPaySchedule: Manager_t::getPaySchedule((Game::Id_t)_session.gameIdValue, _session.gameReturnValue)
                   loadSolver: YES];
     }
@@ -179,6 +190,13 @@ switchToPaySchedule: (const PaySchedule::Lookup::Data_t&) schedule
         return NO;
     }
 
+    // Bail if the solver data for this game isn't bundled (loading it would throw)
+    if (![GameModel hasSolverDataForGame: schedule.getGameId()])
+    {
+        NSLog(@"No solver data for game %d - ignoring", (int)schedule.getGameId());
+        return NO;
+    }
+
     // If a session is active, close it, and create a new one
     if (nil != _session)
     {
@@ -224,6 +242,19 @@ loadSolver: (BOOL) loadSolverFlag
     }
 }
 
++ (NSString*)
+solverPathForGame: (PaySchedule::Game::Id_t) gameId
+{
+    NSString* filename = [NSString stringWithUTF8String: PaySchedule::Manager_t::getGameFilename(gameId).c_str()];
+    return [[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent: filename];
+}
+
++ (BOOL)
+hasSolverDataForGame: (PaySchedule::Game::Id_t) gameId
+{
+    return [[NSFileManager defaultManager] fileExistsAtPath: [GameModel solverPathForGame: gameId]];
+}
+
 - (Hand::Solver::Data_t*)
 loadSolver: (const PaySchedule::Lookup::Data_t*) schedule
 {
@@ -232,9 +263,7 @@ loadSolver: (const PaySchedule::Lookup::Data_t*) schedule
     using namespace PaySchedule;
     int deckSize = (int)(PaySchedule::Manager_t::getGameData(_schedule->getGameId())._deckSize);
     Data_t* data = new Data_t(*schedule, deckSize, 5);
-    NSString* filePath = [[[NSBundle mainBundle] resourcePath] stringByAppendingString:@"/"];
-    filePath = [filePath stringByAppendingString:
-                [NSString stringWithUTF8String: Manager_t::getGameFilename(schedule->getGameId()).c_str()]];
+    NSString* filePath = [GameModel solverPathForGame: schedule->getGameId()];
     data->load([filePath UTF8String]);
     return data;
 #endif
@@ -254,9 +283,38 @@ setCards: (const CardVector_t&) cards
     _hand->clearHeldCards();
 }
 
+/* Balance is stored in cents and may not go negative (model validation) */
+- (BOOL)
+canCoverBet
+{
+    return (nil == _session) || (_session.balanceValue >= (int)(_bet * _session.denominationValue));
+}
+
 - (void)
+addFunds: (int) amount
+{
+    if (nil == _session)
+    {
+        return;
+    }
+    FundingMO* funding = [FundingMO insertInManagedObjectContext: [_session managedObjectContext]];
+    [funding setAmountValue: amount];
+    [funding setDate: [NSDate date]];
+    funding.session = _session;
+    [_session addFundingsObject: funding];
+    [_session setBalanceValue: _session.balanceValue + amount];
+    [self save];
+}
+
+- (BOOL)
 deal
 {
+    if (![self canCoverBet])
+    {
+        NSLog(@"deal: balance %d can't cover bet", _session.balanceValue);
+        return NO;
+    }
+
     // Shuffle deck and deal cards to CurrentHand
     [_deck shuffle];
     const int cardCount = 5;
@@ -288,6 +346,7 @@ deal
     [_session setBalanceValue:_session.balanceValue - _bet * _session.denominationValue];
 
     [self save];
+    return YES;
 }
 
 - (uint32_t)

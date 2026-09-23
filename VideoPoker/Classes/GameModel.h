@@ -74,9 +74,13 @@
                        balance:(int) balanceValue
                   denomination:(int) denominationValue;
 
++ (NSString*) solverPathForGame:(PaySchedule::Game::Id_t)gameId;
++ (BOOL) hasSolverDataForGame:(PaySchedule::Game::Id_t)gameId;
 - (Hand::Solver::Data_t*) loadSolver: (const PaySchedule::Lookup::Data_t*) schedule;
 
-- (void) deal;
+- (BOOL) canCoverBet;
+- (void) addFunds:(int)amount;
+- (BOOL) deal;
 - (uint32_t) draw;
 - (double) updateEv;
 - (void) save;

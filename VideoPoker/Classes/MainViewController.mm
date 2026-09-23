@@ -168,8 +168,12 @@ dealOrDraw
 	if (NO == _draw)
 	{
 		/* Deal */
-        
-        [_game deal];
+
+        if (![_game deal])
+        {
+            [self offerToAddFunds];
+            return;
+        }
         
 		// TODO: self.cardTable.invalidateAllCardViews();
         [self deal];
@@ -323,6 +327,21 @@ chooseGame
     [self presentModalViewController: navController animated: YES];
 }
 
+- (void)
+offerToAddFunds
+{
+    static const int fundsToAdd = 10000; // cents
+    UIAlertController* alert = [UIAlertController alertControllerWithTitle: @"Out of Cash"
+                                                                   message: [NSString stringWithFormat: @"You don't have enough cash for this bet. Add $%d?", fundsToAdd / 100]
+                                                            preferredStyle: UIAlertControllerStyleAlert];
+    [alert addAction: [UIAlertAction actionWithTitle: @"Cancel" style: UIAlertActionStyleCancel handler: nil]];
+    [alert addAction: [UIAlertAction actionWithTitle: @"Add Funds" style: UIAlertActionStyleDefault handler: ^(UIAlertAction*) {
+        [_game addFunds: fundsToAdd];
+        [_mainView showCash: _game.cash];
+    }]];
+    [self presentViewController: alert animated: YES completion: nil];
+}
+
 /* ChooseGameViewControllerDelegate */
 #if 0
 - (const PaySchedule_t*)
@@ -335,6 +354,17 @@ getPaySchedule
 - (void)
 chooseGameDone: (const PaySchedule::Lookup::Data_t&) schedule
 {
+    if (![GameModel hasSolverDataForGame: schedule.getGameId()])
+    {
+        NSString* name = [NSString stringWithUTF8String: schedule.getGameName().c_str()];
+        UIAlertController* alert = [UIAlertController alertControllerWithTitle: @"Game Unavailable"
+                                                                       message: [NSString stringWithFormat: @"Solver data for %@ isn't included in this build.", name]
+                                                                preferredStyle: UIAlertControllerStyleAlert];
+        [alert addAction: [UIAlertAction actionWithTitle: @"OK" style: UIAlertActionStyleDefault handler: nil]];
+        [self.presentedViewController presentViewController: alert animated: YES completion: nil];
+        return;
+    }
+
     if ([_game switchToPaySchedule: schedule])
     {
         [self.payScheduleController payScheduleDidChange];
