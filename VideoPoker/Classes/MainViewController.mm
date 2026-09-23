@@ -18,6 +18,7 @@
 #import "VideoPokerAppDelegate.h"
 #import "MainView.h"
 #import "HandDetailsViewController.h"
+#import "ScaleToFitView.h"
 #import "CardView.h"
 #import "CardTableView.h"
 #import "Deck.h"
@@ -111,6 +112,8 @@ viewDidLoad
     
     self.mainView.creditsLabel.strokeWidth = [NSNumber numberWithInt: 2];
     self.mainView.creditsLabel.strokeColor = [UIColor yellowColor];
+
+    [ScaleToFitView installInView: self.view designSize: CGSizeMake(320.0, 367.0)];
 }
 
 - (void)

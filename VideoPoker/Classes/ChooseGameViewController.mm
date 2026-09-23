@@ -10,6 +10,7 @@
 
 #import "ChooseGameViewController.h"
 #import "PayScheduleViewController.h"
+#import "ScaleToFitView.h"
 
 #include "PaySchedule.hpp"
 
@@ -59,6 +60,8 @@ viewDidLoad
     self.gamePicker.showsSelectionIndicator = YES;
     
     [self initGameMap];
+
+    [ScaleToFitView installInView: self.view designSize: CGSizeMake(320.0, 416.0)];
 }
 
 - (void)

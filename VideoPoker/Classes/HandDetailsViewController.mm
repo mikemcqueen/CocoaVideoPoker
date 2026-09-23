@@ -18,6 +18,7 @@
 #include "PaySchedule.hpp"
 
 #import "Deck.h"
+#import "ScaleToFitView.h"
 
 @implementation HandDetailsViewController
 
@@ -48,6 +49,8 @@ viewDidLoad
     [title release];
     
     detailTableView.rowHeight = 25.0;
+
+    [ScaleToFitView installInView: self.view designSize: CGSizeMake(320.0, 416.0)];
     
     NSLog(@"HandDetailsVC::viewDidLoad()");
     //    [self.view setNeedsDisplay];

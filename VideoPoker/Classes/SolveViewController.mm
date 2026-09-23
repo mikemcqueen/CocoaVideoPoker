@@ -14,6 +14,7 @@
 #import "Deck.h"
 #import "CardTableView.h"
 #import "CardView.h"
+#import "ScaleToFitView.h"
 
 
 @implementation SolveViewController
@@ -69,6 +70,8 @@ viewDidLoad
     // Initialize PickerView arrays
     [self buildSuitViews];
     [self buildNumberViews];
+
+    [ScaleToFitView installInView: self.view designSize: CGSizeMake(320.0, 367.0)];
     
     NSLog (@"SolveView::viewDidLoad()");
 }
@@ -84,7 +87,7 @@ buildSuitViews
     CGDataProviderRelease(provider);
 
     
-    self->suitViewArray = [NSMutableArray arrayWithCapacity: Suit::Count];
+    self.suitViewArray = [NSMutableArray arrayWithCapacity: Suit::Count];
     CGRect cardRect = { 0, 0, 48, 53 };
     for (int suit = 0; suit < Suit::Count; ++suit)
     {
@@ -113,7 +116,7 @@ buildSuitViews
 - (void)
 buildNumberViews
 {
-    /*NSMutableArray* */ self->numberViewArray = [NSMutableArray arrayWithCapacity: 13];
+    self.numberViewArray = [NSMutableArray arrayWithCapacity: 13];
     CGRect rect = { 0, 0, 48, 53 };
     for (size_t number = 2; number <= Ace; ++number)
     {
@@ -237,22 +240,29 @@ viewForRow: (NSInteger) row
 forComponent: (NSInteger) component
 reusingView: (UIView*) view
 {
+    /* The picker may show a row in more than one place at once (e.g. the
+       selection highlight), so return a distinct view rather than a shared one */
     switch (component)
     {
     case 0:
-        return [[numberViewArray objectAtIndex: row] retain];
+    {
+        UILabel* template_ = [numberViewArray objectAtIndex: row];
+        UILabel* label = [view isKindOfClass: [UILabel class]] ? (UILabel*)view
+                       : [[[UILabel alloc] initWithFrame: template_.frame] autorelease];
+        label.text = template_.text;
+        label.font = template_.font;
+        label.numberOfLines = 1;
+        return label;
+    }
 
     case 1:
-        switch (row)
-        {
-            case 0: return [clubView retain];
-            case 1: return [diamondView retain];
-            case 2: return [heartView retain];
-            case 3: return [spadeView retain];
-        }
-        break;
-                // return [[self->suitViewArray objectAtIndex: row] retain];
-                //            break;
+    {
+        UIImageView* template_ = [suitViewArray objectAtIndex: row];
+        UIImageView* imageView = [view isKindOfClass: [UIImageView class]] ? (UIImageView*)view
+                               : [[[UIImageView alloc] initWithFrame: template_.frame] autorelease];
+        imageView.image = template_.image;
+        return imageView;
+    }
     }
     return nil;
 }
@@ -376,6 +386,8 @@ dealloc
 {
     
     NSLog(@"solveViewController dealloc");
+    [suitViewArray release];
+    [numberViewArray release];
     [super dealloc];
 }
 
