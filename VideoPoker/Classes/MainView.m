@@ -54,7 +54,27 @@ layoutSubviews
 //    CGRect frameRV = _returnView.frame;
     _cardTableView.frame = CGRectOffset(_cardTableView.bounds, 0.0, _returnView.frame.origin.y + _returnView.frame.size.height + 1);
     
-    /* TODO: button layout here! */
+    /* Controls below the card table were laid out in the nib for a pay table
+       of nibPayScheduleHeight; shift them by however much the table grew */
+    static const CGFloat nibPayScheduleHeight = 140.0;
+    UIView* controls[] = { _dealButton, _holdBestButton, _betOneButton, _betMaxButton,
+                           _gameOverLabel, _handValueLabel, _betLabel, _winLabel, _creditsLabel };
+    const size_t controlCount = sizeof(controls) / sizeof(controls[0]);
+    if (!_haveControlBaseY)
+    {
+        for (size_t index = 0; index < controlCount; ++index)
+        {
+            _controlBaseY[index] = controls[index].frame.origin.y;
+        }
+        _haveControlBaseY = YES;
+    }
+    CGFloat delta = CGRectGetHeight(_payScheduleView.bounds) - nibPayScheduleHeight;
+    for (size_t index = 0; index < controlCount; ++index)
+    {
+        CGRect frame = controls[index].frame;
+        frame.origin.y = _controlBaseY[index] + delta;
+        controls[index].frame = frame;
+    }
 }
 
 - (void)

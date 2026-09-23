@@ -57,6 +57,7 @@ payScheduleDidChange
     frame.size.height = [PayScheduleView getHeightForSchedule: schedule];
     self.payScheduleView.frame = frame;
     [self.payScheduleView setNeedsDisplay];
+    [self.payScheduleView.superview setNeedsLayout];
 }
 
 - (void)

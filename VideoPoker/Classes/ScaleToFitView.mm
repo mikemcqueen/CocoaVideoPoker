@@ -85,8 +85,18 @@ layoutSubviews
         return;
     }
 
+    /* content can grow past the nib height (e.g. a taller pay table) */
+    CGFloat contentHeight = _designSize.height;
+    for (UIView* child in _designView.subviews)
+    {
+        if (!child.hidden)
+        {
+            contentHeight = MAX(contentHeight, CGRectGetMaxY(child.frame));
+        }
+    }
+
     CGFloat scale = MIN(CGRectGetWidth(available) / _designSize.width,
-                        CGRectGetHeight(available) / _designSize.height);
+                        CGRectGetHeight(available) / contentHeight);
 
     _designView.transform = CGAffineTransformIdentity;
     _designView.bounds = CGRectMake(0.0, 0.0, _designSize.width, _designSize.height);

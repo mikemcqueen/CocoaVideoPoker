@@ -15,7 +15,7 @@
 
 static const CGFloat borderWidth = 2.0;
 static const CGFloat textSpacing = 2.0;
-static const CGFloat lineHeight  = 10.0; // TODO: font.height
+static const CGFloat lineHeight  = 13.0; // TODO: font.height
 
 @implementation PayScheduleView
 
@@ -114,8 +114,7 @@ drawRect: (CGRect) rect
         }
     }
     
-    UIFont* font = [UIFont fontWithName: @"Helvetica-Bold" size: 10.0];
-    UIFont* smallFont = [UIFont fontWithName: @"Helvetica-Bold" size: 9.0];
+    UIFont* font = [UIFont fontWithName: @"Helvetica-Bold" size: 12.0];
     
     ///CGFloat height = font.capHeight;
 
@@ -131,15 +130,17 @@ drawRect: (CGRect) rect
         const string& handName = Hand::getName(schedule.getPaylineHandValue(payLineIndex));
         const NSString* text = [NSString stringWithUTF8String: handName.c_str()];
 
-        CGSize textSize = [text sizeWithFont: font];
-        bool small = false;
+        // Shrink long hand names just enough to fit the column
+        UIFont* nameFont = font;
+        CGSize textSize = [text sizeWithFont: nameFont];
         if (textSize.width > maxWidth)
         {
-            textSize = [text sizeWithFont: smallFont];
-            small = true;
+            nameFont = [font fontWithSize: floor(font.pointSize * maxWidth / textSize.width * 10.0) / 10.0];
+            textSize = [text sizeWithFont: nameFont];
         }
-        // Draw the hand name
-        [text drawAtPoint: point withFont: small ? smallFont : font];
+        // Draw the hand name, vertically centered on the line
+        CGPoint namePoint = CGPointMake(point.x, point.y + (font.lineHeight - nameFont.lineHeight) / 2.0);
+        [text drawAtPoint: namePoint withFont: nameFont];
 
         // Draw dots after name to fill in the column
         CGPoint dotOffset = CGPointMake(textSize.width + 1.0, lineHeight / 2.0 + 1);

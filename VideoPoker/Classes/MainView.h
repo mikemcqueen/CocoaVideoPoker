@@ -27,7 +27,10 @@
     UILabel*        _betLabel;
     UIStrokeLabel*  _winLabel;
     UIStrokeLabel*  _creditsLabel;
-    
+
+    /* nib y positions of the controls below the card table */
+    BOOL            _haveControlBaseY;
+    CGFloat         _controlBaseY[9];
 }
 
 @property(nonatomic, /*readonly,*/ retain) IBOutlet UIView*    payScheduleView;

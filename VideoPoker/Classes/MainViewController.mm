@@ -84,6 +84,7 @@ viewDidLoad
     /* Add pay schedule view */
     [_mainView addSubview: _payScheduleController.view];
     _mainView.payScheduleView = _payScheduleController.view;
+    [_payScheduleController payScheduleDidChange];
     
     /* Add return view */
     [_mainView addSubview: _returnViewController.view];

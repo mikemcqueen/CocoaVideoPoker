@@ -199,6 +199,14 @@ setGame: (PaySchedule::Game::Id_t) gameId
     frame.size.height = [PayScheduleView getHeightForSchedule: schedule];
     self.scrollView.frame = frame;
 
+    /* page control and picker sit directly below the pay table */
+    CGRect pageFrame = self.pageControl.frame;
+    pageFrame.origin.y = CGRectGetMaxY(frame);
+    self.pageControl.frame = pageFrame;
+    CGRect pickerFrame = self.gamePicker.frame;
+    pickerFrame.origin.y = CGRectGetMaxY(pageFrame);
+    self.gamePicker.frame = pickerFrame;
+
     // Load and add views for pages 0 & 1
     [self loadPage: 0];
     [self loadPage: 1];
