@@ -98,8 +98,13 @@ final class VideoPokerUITests: XCTestCase {
         screenshot("11-choose-deuces")
 
         app.pickers.pickerWheels.firstMatch.adjust(toPickerWheelValue: "Jacks or Better")
+        let page2 = app.staticTexts["Jacks or Better - 99.54%"]
         app.scrollViews.firstMatch.swipeLeft()
-        XCTAssertTrue(app.staticTexts["Jacks or Better - 99.54%"].waitForExistence(timeout: 5))
+        if !page2.waitForExistence(timeout: 3) {
+            // tapping right of the current page dot goes to the next page
+            app.pageIndicators.firstMatch.coordinate(withNormalizedOffset: CGVector(dx: 0.9, dy: 0.5)).tap()
+        }
+        XCTAssertTrue(page2.waitForExistence(timeout: 5))
         screenshot("12-choose-jacks-page2")
         app.navigationBars.buttons["Done"].tap()
         XCTAssertTrue(app.buttons["DEAL"].waitForExistence(timeout: 5))
@@ -108,7 +113,20 @@ final class VideoPokerUITests: XCTestCase {
         app.navigationBars.buttons.element(boundBy: 0).tap()
         XCTAssertTrue(app.navigationBars["Options"].waitForExistence(timeout: 5))
         screenshot("14-options")
+
+        // Switch to the classic graphics and back
+        let classic = app.switches["classicGraphics"]
+        XCTAssertEqual(classic.value as? String, "0")
+        classic.tap()
         app.navigationBars["Options"].buttons["Done"].tap()
+        XCTAssertTrue(app.buttons["DEAL"].waitForExistence(timeout: 5))
+        screenshot("15-classic-graphics")
+
+        app.navigationBars.buttons.element(boundBy: 0).tap()
+        XCTAssertEqual(classic.value as? String, "1")
+        classic.tap()
+        app.navigationBars["Options"].buttons["Done"].tap()
+        XCTAssertTrue(app.buttons["DEAL"].waitForExistence(timeout: 5))
     }
 
     func testSolveAndHistory() {

@@ -11,7 +11,7 @@ protocol OptionsViewControllerDelegate: AnyObject {
     func optionsViewControllerDidFinish(_ controller: OptionsViewController)
 }
 
-/// Options (not implemented yet: the switches do nothing)
+/// Options (the Train and Game switches aren't implemented yet)
 final class OptionsViewController: UITableViewController {
     weak var delegate: OptionsViewControllerDelegate?
 
@@ -21,9 +21,22 @@ final class OptionsViewController: UITableViewController {
     @IBOutlet var gameSpeed: UITableViewCell!
     @IBOutlet var autoAddFunds: UITableViewCell!
 
+    private lazy var classicGraphics: UITableViewCell = {
+        let cell = UITableViewCell(style: .default, reuseIdentifier: nil)
+        cell.textLabel?.text = "Classic Graphics"
+        cell.selectionStyle = .none
+        let toggle = UISwitch()
+        toggle.isOn = GraphicsStyle.current == .classic
+        toggle.accessibilityIdentifier = "classicGraphics"
+        toggle.addTarget(self, action: #selector(classicGraphicsChanged(_:)), for: .valueChanged)
+        cell.accessoryView = toggle
+        return cell
+    }()
+
     private var sections: [(title: String, cells: [UITableViewCell])] {
         [("Train", [trainMode, showReturn, showHoldBest]),
-         ("Game", [gameSpeed, autoAddFunds])]
+         ("Game", [gameSpeed, autoAddFunds]),
+         ("Graphics", [classicGraphics])]
     }
 
     override func viewDidLoad() {
@@ -41,6 +54,10 @@ final class OptionsViewController: UITableViewController {
     @IBAction func showHoldBestChanged() {}
     @IBAction func gameSpeedChanged() {}
     @IBAction func autoAddFundsChanged() {}
+
+    @objc private func classicGraphicsChanged(_ sender: UISwitch) {
+        GraphicsStyle.current = sender.isOn ? .classic : .modern
+    }
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         sections.count
