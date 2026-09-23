@@ -5,17 +5,17 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CardTableViewController">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CardTableViewController" customModule="VideoPoker" customModuleProvider="target">
             <connections>
                 <outlet property="view" destination="1" id="24"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <view tag="1" contentMode="scaleToFill" id="1" userLabel="Card Table View" customClass="CardTableView">
+        <view tag="1" contentMode="scaleToFill" id="1" userLabel="Card Table View" customClass="CardTableView" customModule="VideoPoker" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="320" height="95"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
-                <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="14" userLabel="Card View 1" customClass="CardView">
+                <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="14" userLabel="Card View 1" customClass="CardView" customModule="VideoPoker" customModuleProvider="target">
                     <rect key="frame" x="5" y="12" width="58" height="80"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <color key="backgroundColor" red="0.95216965679999999" green="1" blue="0.07242941856" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -24,7 +24,7 @@
                         <outlet property="cardTable" destination="-1" id="26"/>
                     </connections>
                 </view>
-                <view clearsContextBeforeDrawing="NO" tag="1" contentMode="scaleToFill" id="15" userLabel="Card View 2" customClass="CardView">
+                <view clearsContextBeforeDrawing="NO" tag="1" contentMode="scaleToFill" id="15" userLabel="Card View 2" customClass="CardView" customModule="VideoPoker" customModuleProvider="target">
                     <rect key="frame" x="68" y="12" width="58" height="80"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <color key="backgroundColor" red="0.94784653190000001" green="1" blue="0.08900922537" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -33,7 +33,7 @@
                         <outlet property="cardTable" destination="-1" id="27"/>
                     </connections>
                 </view>
-                <view clearsContextBeforeDrawing="NO" tag="2" contentMode="scaleToFill" id="16" userLabel="Card View 3" customClass="CardView">
+                <view clearsContextBeforeDrawing="NO" tag="2" contentMode="scaleToFill" id="16" userLabel="Card View 3" customClass="CardView" customModule="VideoPoker" customModuleProvider="target">
                     <rect key="frame" x="131" y="12" width="58" height="80"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <color key="backgroundColor" red="0.94784653190000001" green="1" blue="0.08900922537" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -42,7 +42,7 @@
                         <outlet property="cardTable" destination="-1" id="41"/>
                     </connections>
                 </view>
-                <view clearsContextBeforeDrawing="NO" tag="3" contentMode="scaleToFill" id="17" userLabel="Card View 4" customClass="CardView">
+                <view clearsContextBeforeDrawing="NO" tag="3" contentMode="scaleToFill" id="17" userLabel="Card View 4" customClass="CardView" customModule="VideoPoker" customModuleProvider="target">
                     <rect key="frame" x="194" y="12" width="58" height="80"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <color key="backgroundColor" red="0.94784653190000001" green="1" blue="0.08900922537" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -51,7 +51,7 @@
                         <outlet property="cardTable" destination="-1" id="45"/>
                     </connections>
                 </view>
-                <view clearsContextBeforeDrawing="NO" tag="4" contentMode="scaleToFill" id="18" userLabel="Card View 5" customClass="CardView">
+                <view clearsContextBeforeDrawing="NO" tag="4" contentMode="scaleToFill" id="18" userLabel="Card View 5" customClass="CardView" customModule="VideoPoker" customModuleProvider="target">
                     <rect key="frame" x="257" y="12" width="58" height="80"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <color key="backgroundColor" red="0.94784653190000001" green="1" blue="0.08900922537" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -65,12 +65,11 @@
             <nil key="simulatedStatusBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <connections>
-                <outlet property="cardTable" destination="-1" id="25"/>
-                <outlet property="cardView1" destination="14" id="19"/>
-                <outlet property="cardView2" destination="15" id="20"/>
-                <outlet property="cardView3" destination="16" id="21"/>
-                <outlet property="cardView4" destination="17" id="22"/>
-                <outlet property="cardView5" destination="18" id="23"/>
+                <outletCollection property="cardViews" destination="14" collectionClass="NSMutableArray" id="19"/>
+                <outletCollection property="cardViews" destination="15" collectionClass="NSMutableArray" id="20"/>
+                <outletCollection property="cardViews" destination="16" collectionClass="NSMutableArray" id="21"/>
+                <outletCollection property="cardViews" destination="17" collectionClass="NSMutableArray" id="22"/>
+                <outletCollection property="cardViews" destination="18" collectionClass="NSMutableArray" id="23"/>
             </connections>
         </view>
     </objects>

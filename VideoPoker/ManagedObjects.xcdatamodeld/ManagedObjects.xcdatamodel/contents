@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="23000" systemVersion="25A0" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="funding" representedClassName=".Funding" syncable="YES">
+        <attribute name="amount" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="date" attributeType="Date" usesScalarValueType="NO"/>
+        <relationship name="session" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="session" inverseName="fundings" inverseEntity="session"/>
+    </entity>
+    <entity name="hand" representedClassName=".Hand" syncable="YES">
+        <attribute name="bet" attributeType="Integer 32" minValueString="1" usesScalarValueType="YES"/>
+        <attribute name="payout" optional="YES" attributeType="Integer 32" minValueString="0" usesScalarValueType="YES"/>
+        <attribute name="startDate" attributeType="Date" usesScalarValueType="NO"/>
+        <relationship name="bestHand" minCount="1" maxCount="1" deletionRule="Cascade" destinationEntity="handData"/>
+        <relationship name="dealtHand" minCount="1" maxCount="1" deletionRule="Cascade" destinationEntity="handData"/>
+        <relationship name="finalHand" optional="YES" minCount="1" maxCount="1" deletionRule="Cascade" destinationEntity="handData"/>
+        <relationship name="session" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="session" inverseName="hands" inverseEntity="session"/>
+        <relationship name="yourHand" optional="YES" minCount="1" maxCount="1" deletionRule="Cascade" destinationEntity="handData"/>
+    </entity>
+    <entity name="handData" representedClassName=".HandData" syncable="YES">
+        <attribute name="cards" attributeType="Integer 32" usesScalarValueType="YES"/>
+        <attribute name="ev" attributeType="Double" usesScalarValueType="YES"/>
+        <attribute name="value" attributeType="Integer 32" usesScalarValueType="YES"/>
+        <relationship name="hand" minCount="1" maxCount="1" deletionRule="Cascade" destinationEntity="hand"/>
+    </entity>
+    <entity name="session" representedClassName=".Session" syncable="YES">
+        <attribute name="actualReturn" attributeType="Double" minValueString="0" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="balance" attributeType="Integer 32" minValueString="0" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="denomination" attributeType="Integer 32" usesScalarValueType="YES"/>
+        <attribute name="endDate" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="gameId" indexed="YES" attributeType="Integer 32" usesScalarValueType="YES"/>
+        <attribute name="gameReturn" indexed="YES" attributeType="Double" usesScalarValueType="YES"/>
+        <attribute name="handCount" attributeType="Integer 32" minValueString="0" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="perfectPlayCount" attributeType="Integer 32" minValueString="0" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="startDate" attributeType="Date" usesScalarValueType="NO"/>
+        <relationship name="fundings" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="funding" inverseName="session" inverseEntity="funding"/>
+        <relationship name="hands" minCount="1" toMany="YES" deletionRule="Cascade" destinationEntity="hand" inverseName="session" inverseEntity="hand"/>
+    </entity>
+</model>

@@ -11,7 +11,7 @@
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <customObject id="3" userLabel="appDelegate" customClass="VideoPokerAppDelegate">
+        <customObject id="3" userLabel="appDelegate" customClass="AppDelegate" customModule="VideoPoker" customModuleProvider="target">
             <connections>
                 <outlet property="tabController" destination="29" id="41"/>
                 <outlet property="window" destination="2" id="5"/>
@@ -23,7 +23,7 @@
             <color key="backgroundColor" systemColor="darkTextColor"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
         </window>
-        <customObject id="27" userLabel="game" customClass="GameModel"/>
+        <customObject id="27" userLabel="game" customClass="GameModel" customModule="VideoPoker" customModuleProvider="target"/>
         <tabBarController id="29">
             <extendedEdge key="edgesForExtendedLayout"/>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4_0.fullscreen"/>
@@ -40,7 +40,7 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <viewControllers>
-                        <viewController title="Train" nibName="MainView" id="23" userLabel="trainViewController" customClass="MainViewController">
+                        <viewController title="Train" nibName="MainView" id="23" userLabel="trainViewController" customClass="MainViewController" customModule="VideoPoker" customModuleProvider="target">
                             <extendedEdge key="edgesForExtendedLayout"/>
                             <navigationItem key="navigationItem" title="Train" id="25" userLabel="Navigation Item">
                                 <barButtonItem key="backBarButtonItem" id="39"/>
@@ -58,7 +58,7 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <viewControllers>
-                        <viewController title="Solve" nibName="SolveView" id="51" userLabel="solveViewController" customClass="SolveViewController">
+                        <viewController title="Solve" nibName="SolveView" id="51" userLabel="solveViewController" customClass="SolveViewController" customModule="VideoPoker" customModuleProvider="target">
                             <extendedEdge key="edgesForExtendedLayout"/>
                             <navigationItem key="navigationItem" title="Solve" id="53"/>
                             <connections>
@@ -74,7 +74,7 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <viewControllers>
-                        <viewController nibName="HistoryView" id="58" userLabel="historyViewController" customClass="HistoryViewController">
+                        <viewController nibName="HistoryView" id="58" userLabel="historyViewController" customClass="HistoryViewController" customModule="VideoPoker" customModuleProvider="target">
                             <extendedEdge key="edgesForExtendedLayout"/>
                             <navigationItem key="navigationItem" title="History" id="60"/>
                             <connections>

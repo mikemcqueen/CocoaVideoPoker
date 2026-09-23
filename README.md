@@ -14,5 +14,17 @@ Or from the command line:
     xcodebuild -project VideoPoker.xcodeproj -scheme VideoPoker -sdk iphonesimulator \
         -destination 'platform=iOS Simulator,name=iPhone 17' build
 
-CardLib is compiled directly into the app target (there is no separate static library anymore).
-Only the Jacks or Better solver data (SolverData/Jacks.dat) is checked in, so other games have no solver data.
+The app is written in Swift:
+
+* VideoPoker/Engine: cards, hand evaluation, pay tables, and the solver data lookup (a Swift port of the CardLib code the app uses)
+* VideoPoker/Classes: the UIKit app (the UI is still laid out in the .xib files in VideoPoker/Resources)
+* VideoPoker/ManagedObjects: Core Data history (the model is unchanged, so existing history carries over)
+
+To run the unit and UI tests:
+
+    xcodebuild -project VideoPoker.xcodeproj -scheme VideoPoker -sdk iphonesimulator \
+        -destination 'platform=iOS Simulator,name=iPhone 17' test
+
+The C++ CardLib (including SolverDataGenerator) is no longer part of the app, but is kept for generating solver data.
+Only the Jacks or Better solver data (SolverData/Jacks.dat) is checked in, so other games have no solver data
+(All American and Bonus Poker Deluxe also use Jacks.dat).
