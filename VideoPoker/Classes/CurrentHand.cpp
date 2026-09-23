@@ -130,7 +130,7 @@ toggleHeldCard(Card_t card)
 {
     if (isHeldCard(card))
     {
-        _heldCards.erase(remove_if(_heldCards.begin(), _heldCards.end(), bind2nd(equal_to<Card_t>(), card)), _heldCards.end());
+        _heldCards.erase(remove(_heldCards.begin(), _heldCards.end(), card), _heldCards.end());
     }
     else
     {

@@ -25,7 +25,8 @@
 - (void)
 applicationDidFinishLaunching: (UIApplication *) application
 {
-    [window addSubview: [tabController view]];
+    [window setFrame: [[UIScreen mainScreen] bounds]];
+    [window setRootViewController: tabController];
     
 	srandom((unsigned int)time(0L));
     

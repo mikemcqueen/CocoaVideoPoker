@@ -4,10 +4,15 @@ The secret sauce is stored in file SolverData/Jacks.dat, which is a datafile tha
 
 Some of the CardLib code was originally Windows code, and dates back to the early 2000s (or earlier) when I wrote a Windows-based Texas Holdem Poker playing program, which automatically folded bad starting  hands (and beeped on good hands) for an early internet real-money poker site. 
 
-To run in simulator:
+To run in simulator (Xcode 26 / iOS 15+):
 
-Load VideoPoker/xcode/VideoPoker.xcworkspace
+Open VideoPoker/VideoPoker.xcodeproj, pick an iPhone simulator, and Build & Run.
 
-You may then need to select "VideoPoker Debug Simulator" as the current project in Xcode.
+Or from the command line:
 
-Build & Run.
+    cd VideoPoker
+    xcodebuild -project VideoPoker.xcodeproj -scheme VideoPoker -sdk iphonesimulator \
+        -destination 'platform=iOS Simulator,name=iPhone 17' build
+
+CardLib is compiled directly into the app target (there is no separate static library anymore).
+Only the Jacks or Better solver data (SolverData/Jacks.dat) is checked in, so other games have no solver data.
